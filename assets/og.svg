@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="marca" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f83f8"/>
+      <stop offset="1" stop-color="#6c2bd9"/>
+    </linearGradient>
+    <pattern id="malla" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M52 0H0V52" fill="none" stroke="#334155" stroke-width="1" opacity=".55"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#fondo)"/>
+  <rect width="1200" height="630" fill="url(#malla)"/>
+
+  <rect x="80" y="86" width="60" height="60" rx="15" fill="url(#marca)"/>
+  <g fill="#fff">
+    <rect x="94" y="116" width="8" height="16" rx="2"/>
+    <rect x="106" y="106" width="8" height="26" rx="2"/>
+    <rect x="118" y="96" width="8" height="36" rx="2" opacity=".85"/>
+  </g>
+  <text x="158" y="112" font-family="Inter,Segoe UI,sans-serif" font-size="26" font-weight="700" fill="#f1f5f9">TecnoRestart MEAL</text>
+  <text x="158" y="138" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#64748b" letter-spacing="1.6">MONITOREO Y EVALUACIÓN</text>
+
+  <text x="80" y="268" font-family="Inter,Segoe UI,sans-serif" font-size="68" font-weight="800" fill="#f8fafc" letter-spacing="-2">Del formulario en papel</text>
+  <text x="80" y="348" font-family="Inter,Segoe UI,sans-serif" font-size="68" font-weight="800" fill="#7dd3fc" letter-spacing="-2">al informe del donante</text>
+
+  <text x="80" y="412" font-family="Inter,Segoe UI,sans-serif" font-size="25" fill="#94a3b8">Captura sin internet · validación automática · reportes 345W en minutos</text>
+
+  <g font-family="Inter,Segoe UI,sans-serif" font-size="19" font-weight="600">
+    <rect x="80" y="466" width="248" height="52" rx="26" fill="#1a56db"/>
+    <text x="204" y="499" fill="#fff" text-anchor="middle">Agendar una demo</text>
+
+    <rect x="348" y="466" width="212" height="52" rx="26" fill="none" stroke="#475569" stroke-width="1.5"/>
+    <text x="454" y="499" fill="#cbd5e1" text-anchor="middle">Ver las pantallas</text>
+  </g>
+
+  <g transform="translate(760,150)">
+    <rect x="0" y="0" width="360" height="330" rx="16" fill="#f0f4f8" opacity=".97"/>
+    <rect x="0" y="0" width="360" height="34" rx="16" fill="#e2e8f0"/>
+    <rect x="0" y="22" width="360" height="12" fill="#e2e8f0"/>
+    <circle cx="20" cy="17" r="5" fill="#f98080"/><circle cx="38" cy="17" r="5" fill="#fce96a"/><circle cx="56" cy="17" r="5" fill="#84e1bc"/>
+
+    <g>
+      <rect x="18" y="50" width="76" height="56" rx="8" fill="#fff" stroke="#d1d9e0"/>
+      <rect x="18" y="50" width="76" height="3" fill="#1a56db"/>
+      <text x="30" y="80" font-family="Inter,sans-serif" font-size="19" font-weight="800" fill="#111827">1.842</text>
+      <text x="30" y="96" font-family="Inter,sans-serif" font-size="9" fill="#6b7280">Personas</text>
+
+      <rect x="104" y="50" width="76" height="56" rx="8" fill="#fff" stroke="#d1d9e0"/>
+      <rect x="104" y="50" width="76" height="3" fill="#057a55"/>
+      <text x="116" y="80" font-family="Inter,sans-serif" font-size="19" font-weight="800" fill="#111827">4.061</text>
+      <text x="116" y="96" font-family="Inter,sans-serif" font-size="9" fill="#6b7280">Atenciones</text>
+
+      <rect x="190" y="50" width="76" height="56" rx="8" fill="#fff" stroke="#d1d9e0"/>
+      <rect x="190" y="50" width="76" height="3" fill="#6c2bd9"/>
+      <text x="202" y="80" font-family="Inter,sans-serif" font-size="19" font-weight="800" fill="#111827">128</text>
+      <text x="202" y="96" font-family="Inter,sans-serif" font-size="9" fill="#6b7280">Actividades</text>
+
+      <rect x="276" y="50" width="66" height="56" rx="8" fill="#fff" stroke="#d1d9e0"/>
+      <rect x="276" y="50" width="66" height="3" fill="#c27803"/>
+      <text x="288" y="80" font-family="Inter,sans-serif" font-size="19" font-weight="800" fill="#111827">12</text>
+      <text x="288" y="96" font-family="Inter,sans-serif" font-size="9" fill="#6b7280">Hallazgos</text>
+    </g>
+
+    <rect x="18" y="120" width="324" height="192" rx="10" fill="#fff" stroke="#d1d9e0"/>
+    <text x="32" y="142" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#374151">Avance por indicador</text>
+    <g>
+      <rect x="32" y="158" width="250" height="7" rx="4" fill="#e8edf2"/><rect x="32" y="158" width="230" height="7" rx="4" fill="#057a55"/>
+      <rect x="32" y="188" width="250" height="7" rx="4" fill="#e8edf2"/><rect x="32" y="188" width="195" height="7" rx="4" fill="#1a56db"/>
+      <rect x="32" y="218" width="250" height="7" rx="4" fill="#e8edf2"/><rect x="32" y="218" width="152" height="7" rx="4" fill="#c27803"/>
+      <rect x="32" y="248" width="250" height="7" rx="4" fill="#e8edf2"/><rect x="32" y="248" width="85"  height="7" rx="4" fill="#c81e1e"/>
+      <rect x="32" y="278" width="250" height="7" rx="4" fill="#e8edf2"/><rect x="32" y="278" width="238" height="7" rx="4" fill="#057a55"/>
+    </g>
+    <g font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#6b7280">
+      <text x="296" y="166">92%</text><text x="296" y="196">78%</text><text x="296" y="226">61%</text>
+      <text x="296" y="256">34%</text><text x="296" y="286">95%</text>
+    </g>
+  </g>
+</svg>
