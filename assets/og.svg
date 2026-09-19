@@ -25,10 +25,11 @@
   <text x="158" y="112" font-family="Inter,Segoe UI,sans-serif" font-size="26" font-weight="700" fill="#f1f5f9">TecnoRestart MEAL</text>
   <text x="158" y="138" font-family="Inter,Segoe UI,sans-serif" font-size="15" font-weight="600" fill="#64748b" letter-spacing="1.6">MONITOREO Y EVALUACIÓN</text>
 
-  <text x="80" y="268" font-family="Inter,Segoe UI,sans-serif" font-size="68" font-weight="800" fill="#f8fafc" letter-spacing="-2">Del formulario en papel</text>
-  <text x="80" y="348" font-family="Inter,Segoe UI,sans-serif" font-size="68" font-weight="800" fill="#7dd3fc" letter-spacing="-2">al informe del donante</text>
+  <text x="80" y="262" font-family="Inter,Segoe UI,sans-serif" font-size="52" font-weight="800" fill="#f8fafc" letter-spacing="-1.5">Del formulario en papel</text>
+  <text x="80" y="322" font-family="Inter,Segoe UI,sans-serif" font-size="52" font-weight="800" fill="#7dd3fc" letter-spacing="-1.5">al informe del donante</text>
 
-  <text x="80" y="412" font-family="Inter,Segoe UI,sans-serif" font-size="25" fill="#94a3b8">Captura sin internet · validación automática · reportes 345W en minutos</text>
+  <text x="80" y="378" font-family="Inter,Segoe UI,sans-serif" font-size="20" fill="#94a3b8">Captura sin internet · validación automática</text>
+  <text x="80" y="406" font-family="Inter,Segoe UI,sans-serif" font-size="20" fill="#94a3b8">Reportes 345W listos para el clúster</text>
 
   <g font-family="Inter,Segoe UI,sans-serif" font-size="19" font-weight="600">
     <rect x="80" y="466" width="248" height="52" rx="26" fill="#1a56db"/>

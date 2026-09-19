@@ -1,0 +1,5 @@
+# TecnoRestart MEAL
+User-agent: *
+Allow: /
+
+Sitemap: https://tecnorestart.com/sitemap.xml
