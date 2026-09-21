@@ -1,6 +1,6 @@
 /* ============================================================================
    Landing — lógica de la página.
-   ▼▼▼  LO ÚNICO QUE TENÉS QUE EDITAR ESTÁ EN ESTE BLOQUE  ▼▼▼
+   ▼▼▼  LO ÚNICO QUE DEBE EDITAR ESTÁ EN ESTE BLOQUE  ▼▼▼
    ============================================================================ */
 var CONFIG = {
   marca:     'TecnoRestart MEAL',
@@ -11,7 +11,7 @@ var CONFIG = {
   // Cómo se muestra el número en pantalla.
   whatsappVisible: '+58 412 168 0381',
   // Mensaje con el que se abre el chat.
-  whatsappMensaje: 'Hola, vi la web de TecnoRestart MEAL y quiero agendar una demo.',
+  whatsappMensaje: 'Buen día, vi el sitio de TecnoRestart MEAL y quisiera agendar una demostración.',
 
   // Usuario de Instagram, sin la arroba.
   instagram: 'tecnorestart',
@@ -32,28 +32,28 @@ var CONFIG = {
   autorAnios:   '12+',
 
   // ── Datos legales (salen en la página de privacidad) ─────────────────
-  razonSocial: 'Gustavo Delgado',   // razón social o tu nombre completo si facturás como persona
+  razonSocial: 'Gustavo Delgado',   // razón social, o el nombre completo si factura como persona
   ciudad:      'Maracaibo',
   pais:        'Venezuela',
-  correoPrivacidad: '',      // si lo dejás vacío se usa el correo de arriba
+  correoPrivacidad: '',      // si se deja vacío se usa el correo de arriba
   privacidadDesde:  '19 de septiembre de 2026',     // fecha de última actualización
 
   // ── Precios ──────────────────────────────────────────────────────────
   precioBasicoAntes:  'US$ 120',
   precioBasico:       'US$ 80',
-  ahorroBasico:       'Ahorras US$ 40 por mes',
+  ahorroBasico:       'Ahorra US$ 40 por mes',
 
   precioPremiumAntes: 'US$ 250',
   precioPremium:      'US$ 125',
-  // Cupos del precio de lanzamiento. Bajalo a medida que los tomes;
+  // Cupos del precio de lanzamiento. Bájelo a medida que los tome;
   // en 0 el aviso cambia solo a "cupos agotados".
   cuposTotales:       5,
   cuposDisponibles:   5
 };
 
 /* ── Medición ──────────────────────────────────────────────────────────
-   Dejá los tres campos vacíos y no se carga nada: ni scripts, ni cookies.
-   Completalos cuando enciendas Google Ads (ver docs/google-ads.md, sección 7).
+   Deje los tres campos vacíos y no se carga nada: ni scripts, ni cookies.
+   Complételos cuando encienda Google Ads (ver docs/google-ads.md, sección 7).
    ───────────────────────────────────────────────────────────────────── */
 var MEDICION = {
   ga4:       '',            // 'G-XXXXXXXXXX'  — Google Analytics 4
@@ -76,14 +76,31 @@ var MEDICION = {
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var reducido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── 1. Contactos y marca ───────────────────────────────────────────── */
-  var waURL = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(CONFIG.whatsappMensaje);
-  var igURL = 'https://instagram.com/' + CONFIG.instagram;
-  var mailURL = 'mailto:' + CONFIG.correo + '?subject=' + encodeURIComponent(CONFIG.correoAsunto);
+  /* Traducción. Si js/i18n.js no está cargado, T() devuelve el español tal
+     cual y todo sigue funcionando igual que antes. */
+  function T(txt, vars) {
+    return window.I18N ? window.I18N.t(txt, vars) : txt;
+  }
+  function numero(n) {
+    return window.I18N ? window.I18N.numero(n) : String(n);
+  }
 
-  $$('[data-wa-link]').forEach(function (a) { a.href = waURL; });
+  /* ── 1. Contactos y marca ───────────────────────────────────────────── */
+  var igURL = 'https://instagram.com/' + CONFIG.instagram;
+
+  // El mensaje del chat y el asunto del correo salen en el idioma activo.
+  function pintarContactos() {
+    var waURL = 'https://wa.me/' + CONFIG.whatsapp +
+                '?text=' + encodeURIComponent(T(CONFIG.whatsappMensaje));
+    var mailURL = 'mailto:' + CONFIG.correo +
+                  '?subject=' + encodeURIComponent(T(CONFIG.correoAsunto));
+    $$('[data-wa-link]').forEach(function (a) { a.href = waURL; });
+    $$('[data-mail-link]').forEach(function (a) { a.href = mailURL; });
+  }
+  pintarContactos();
+  document.addEventListener('i18n:aplicado', pintarContactos);
+
   $$('[data-ig-link]').forEach(function (a) { a.href = igURL; });
-  $$('[data-mail-link]').forEach(function (a) { a.href = mailURL; });
   $$('[data-wa-texto]').forEach(function (e) { e.textContent = CONFIG.whatsappVisible; });
   $$('[data-ig-texto]').forEach(function (e) { e.textContent = '@' + CONFIG.instagram; });
   $$('[data-mail-texto]').forEach(function (e) { e.textContent = CONFIG.correo; });
@@ -116,16 +133,21 @@ var MEDICION = {
   });
 
   var cupos = $('[data-cupos]');
-  if (cupos) {
+  function pintarCupos() {
+    if (!cupos) return;
     if (CONFIG.cuposDisponibles <= 0) {
-      cupos.textContent = 'Los ' + CONFIG.cuposTotales + ' cupos de lanzamiento están tomados · consultanos por la tarifa vigente';
+      cupos.textContent = T('Los {total} cupos de lanzamiento están tomados · consúltenos por la tarifa vigente',
+        { total: CONFIG.cuposTotales });
     } else if (CONFIG.cuposDisponibles === 1) {
-      cupos.textContent = 'Precio de lanzamiento · queda 1 cupo de ' + CONFIG.cuposTotales;
+      cupos.textContent = T('Precio de lanzamiento · queda 1 cupo de {total}',
+        { total: CONFIG.cuposTotales });
     } else {
-      cupos.textContent = 'Precio de lanzamiento · quedan ' + CONFIG.cuposDisponibles +
-        ' de ' + CONFIG.cuposTotales + ' cupos';
+      cupos.textContent = T('Precio de lanzamiento · quedan {quedan} de {total} cupos',
+        { quedan: CONFIG.cuposDisponibles, total: CONFIG.cuposTotales });
     }
   }
+  pintarCupos();
+  document.addEventListener('i18n:aplicado', pintarCupos);
   if (document.body.dataset.titulo !== 'propio') {
     document.title = document.title.split('TecnoRestart MEAL').join(CONFIG.marca);
   }
@@ -167,7 +189,7 @@ var MEDICION = {
     var fijo = el.getAttribute('data-texto');
     var pre = el.getAttribute('data-prefijo') || '';
     var suf = el.getAttribute('data-sufijo') || '';
-    if (fijo) { el.innerHTML = pre + fijo + suf; return; }
+    if (fijo) { el.innerHTML = pre + T(fijo) + suf; return; }
     var fin = parseInt(el.getAttribute('data-contador'), 10) || 0;
     if (reducido || fin === 0) { el.innerHTML = pre + fin + suf; return; }
     var t0 = null, dur = 1100;
@@ -175,7 +197,7 @@ var MEDICION = {
       if (!t0) t0 = t;
       var p = Math.min((t - t0) / dur, 1);
       var v = Math.round(fin * (1 - Math.pow(1 - p, 3)));
-      el.innerHTML = pre + v.toLocaleString('es-PY') + suf;
+      el.innerHTML = pre + numero(v) + suf;
       if (p < 1) requestAnimationFrame(paso);
     }
     requestAnimationFrame(paso);
@@ -230,7 +252,7 @@ var MEDICION = {
       seg.className = 'demo-seg';
       seg.type = 'button';
       seg.style.setProperty('--dur', DURACION + 'ms');
-      seg.setAttribute('aria-label', 'Ir al paso ' + (n + 1));
+      seg.setAttribute('aria-label', T('Ir al paso {n}', { n: n + 1 }));
       seg.innerHTML = '<i></i>';
       seg.addEventListener('click', function () { ir(n); arrancar(); });
       pista.appendChild(seg);
@@ -250,7 +272,7 @@ var MEDICION = {
       void act.offsetWidth;
       act.classList.add('activo');
 
-      rotulo.textContent = nombres[n] || '';
+      rotulo.textContent = nombres[n] ? T(nombres[n]) : '';
 
       var vivo = cuadros[n];
       $$('[data-contador]', vivo).forEach(function (el) { delete el.dataset.contado; contar(el); });
@@ -272,7 +294,7 @@ var MEDICION = {
       corriendo = true;
       demo.classList.remove('pausada');
       play.innerHTML = iconoPausa;
-      play.setAttribute('aria-label', 'Pausar');
+      play.setAttribute('aria-label', T('Pausar'));
       ir(i);
       temporizador = setInterval(siguiente, DURACION);
     }
@@ -282,7 +304,7 @@ var MEDICION = {
       corriendo = false;
       demo.classList.add('pausada');
       play.innerHTML = iconoPlay;
-      play.setAttribute('aria-label', 'Reproducir');
+      play.setAttribute('aria-label', T('Reproducir'));
     }
 
     play.innerHTML = iconoPlay;
@@ -374,7 +396,7 @@ var MEDICION = {
       '<div class="cookies-txt">' +
         '<b>Este sitio usa cookies para medir su uso</b>' +
         '<span>Nos sirven para saber qué contenido ayuda y de dónde llegan las visitas. ' +
-        'Si preferís que no, el sitio funciona igual. ' +
+        'Si prefiere que no, el sitio funciona igual. ' +
         '<a href="privacidad.html">Leer la política de privacidad</a></span>' +
       '</div>' +
       '<div class="cookies-btns">' +
@@ -382,6 +404,7 @@ var MEDICION = {
         '<button type="button" class="btn sm primario" data-cookies="si">Aceptar</button>' +
       '</div>';
     document.body.appendChild(aviso);
+    if (window.I18N) window.I18N.aplicar(aviso);
     aviso.addEventListener('click', function (e) {
       var b = e.target.closest('[data-cookies]');
       if (!b) return;
@@ -402,7 +425,7 @@ var MEDICION = {
     a.addEventListener('click', function (e) {
       e.preventDefault();
       if (!hayMedicion) {
-        alert('Este sitio todavía no usa cookies de medición: no hay nada que configurar.');
+        alert(T('Este sitio todavía no usa cookies de medición: no hay nada que configurar.'));
         return;
       }
       construirAviso();
@@ -430,17 +453,17 @@ var MEDICION = {
       var d = new FormData(form);
       var v = function (k) { return (d.get(k) || '').toString().trim(); };
       if (!v('nombre') || !v('correo')) {
-        alert('Necesitamos al menos tu nombre y tu correo.');
+        alert(T('Necesitamos al menos su nombre y su correo.'));
         return;
       }
       var texto =
-        'Hola, quiero una demo de ' + CONFIG.marca + '.\n\n' +
-        'Nombre: ' + v('nombre') + '\n' +
-        'Organización: ' + (v('org') || '—') + '\n' +
-        'Correo: ' + v('correo') + '\n' +
-        'WhatsApp: ' + (v('tel') || '—') + '\n' +
-        'Personas registrando en terreno: ' + v('tam') + '\n' +
-        'Lo que más le cuesta hoy: ' + (v('mensaje') || '—');
+        T('Buen día, solicito una demostración de {marca}.', { marca: CONFIG.marca }) + '\n\n' +
+        T('Nombre') + ': ' + v('nombre') + '\n' +
+        T('Organización') + ': ' + (v('org') || '—') + '\n' +
+        T('Correo') + ': ' + v('correo') + '\n' +
+        T('WhatsApp') + ': ' + (v('tel') || '—') + '\n' +
+        T('Personas registrando en terreno') + ': ' + v('tam') + '\n' +
+        T('Principal dificultad hoy') + ': ' + (v('mensaje') || '—');
       evento('solicitud_demo', { tam: v('tam') });
       window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(texto), '_blank', 'noopener');
     });

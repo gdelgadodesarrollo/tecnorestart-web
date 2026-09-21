@@ -109,7 +109,7 @@
           '</div>' +
         '</div>' +
         '<div class="app-tarjeta">' +
-          '<div class="app-tarjeta-h"><h5>Requiere tu atención</h5><span>bandeja única</span></div>' +
+          '<div class="app-tarjeta-h"><h5>Requiere su atención</h5><span>bandeja única</span></div>' +
           '<div class="app-tarjeta-b" style="display:grid;gap:.4rem">' +
             '<div class="app-mensaje ambar"><b>9 rechazos</b> del lote del 15/09 esperan corrección.</div>' +
             '<div class="app-mensaje rojo"><b>3 posibles duplicados</b> detectados entre proyectos.</div>' +
@@ -123,13 +123,13 @@
   /* ── Cargar formularios ─────────────────────────────────────────────── */
   var CARGA = marco('carga',
     '<div class="app-h">' +
-      '<div><h4>Cargar formularios</h4><p>Arrastrá el archivo del periodo. El motor valida antes de guardar nada.</p></div>' +
+      '<div><h4>Cargar formularios</h4><p>Arrastre el archivo del periodo. El motor valida antes de guardar nada.</p></div>' +
       '<div style="display:flex;gap:.35rem"><span class="app-btn">Ver plantillas</span><span class="app-btn pri">Nueva carga</span></div>' +
     '</div>' +
 
     '<div class="app-suelta" style="margin-bottom:.9rem">' +
       '<div class="icono">&#8681;</div>' +
-      '<b>Soltá aquí el Excel o el formulario del mes</b>' +
+      '<b>Suelte aquí el Excel o el formulario del mes</b>' +
       '<span>.xlsx, .csv o foto de la planilla · hasta 20 MB</span>' +
     '</div>' +
 

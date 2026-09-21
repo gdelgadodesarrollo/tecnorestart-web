@@ -1022,3 +1022,33 @@ h3{font-size:1.15rem;letter-spacing:-.015em}
   .tray-item.actual .tray-fecha::after{display:none}
   .tray-bloques{grid-template-columns:1fr;gap:18px}
 }
+
+/* ── Selector de idioma ───────────────────────────────────────────────── */
+/* Mientras se aplica un idioma distinto del original, el cuerpo se mantiene
+   oculto para que no se vea un parpadeo de español. js/i18n.js siempre lo
+   destapa, aunque el diccionario falle. */
+html.i18n-cargando body{visibility:hidden}
+
+.idiomas{
+  display:inline-flex;gap:2px;flex:0 0 auto;
+  padding:2px;border-radius:99px;
+  border:1px solid var(--borde);background:var(--bg-2);
+}
+.idiomas button{
+  border:0;background:transparent;cursor:pointer;
+  padding:.3rem .55rem;border-radius:99px;
+  font-size:.72rem;font-weight:700;letter-spacing:.04em;
+  color:var(--texto-45);transition:background var(--t),color var(--t);
+}
+.idiomas button:hover{color:var(--texto)}
+.idiomas button[aria-pressed="true"]{background:var(--azul);color:#fff}
+
+/* Sobre la barra oscura del inicio */
+.nav .idiomas{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.07)}
+.nav .idiomas button{color:#cbd5e1}
+.nav .idiomas button:hover{color:#fff;background:rgba(255,255,255,.1)}
+.nav .idiomas button[aria-pressed="true"]{background:var(--azul);color:#fff}
+
+/* En las páginas de documento va pegado al botón de la derecha */
+.doc-barra [data-i18n-selector]{margin-left:auto;display:flex}
+.doc-barra [data-i18n-selector] + .btn{margin-left:.6rem}
