@@ -1,0 +1,50 @@
+name: Mantener despierto MEAL
+
+# Render Free duerme el servicio tras 15 minutos sin trafico y la primera
+# entrada del dia tarda medio minuto. Este ping lo mantiene activo.
+#
+# Por que vive en este repositorio y no en el de la aplicacion:
+# el repositorio de la aplicacion es privado y GitHub solo regala 2.000 minutos
+# de Actions al mes, asi que ahi el ping solo puede correr en horario laboral.
+# Este repositorio es publico y los minutos de Actions son ilimitados, de modo
+# que aqui si se puede cubrir las 24 horas sin costo.
+#
+# La URL vive en la variable URL_SALUD del repositorio (Settings -> Secrets and
+# variables -> Actions -> Variables), no en este archivo, que es publico.
+#
+# Aviso: GitHub desactiva los cron de un repositorio sin commits durante 60 dias
+# y avisa por correo. Si eso pasa, basta reactivarlo desde la pestana Actions.
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: mantener-despierto-meal
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ping a /api/salud
+        env:
+          URL: ${{ vars.URL_SALUD }}
+        run: |
+          if [ -z "$URL" ]; then
+            echo "Falta la variable URL_SALUD del repositorio."
+            exit 1
+          fi
+          for intento in 1 2 3; do
+            codigo=$(curl -sS -o respuesta.txt -w '%{http_code}' --max-time 120 "$URL" || echo 000)
+            echo "Intento $intento -> HTTP $codigo"
+            cat respuesta.txt || true
+            echo
+            if [ "$codigo" = "200" ]; then
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "El servidor no respondio 200 tras 3 intentos."
+          exit 1
