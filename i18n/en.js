@@ -14,6 +14,8 @@
   'use strict';
 
   var MAPA = {
+    "¿Cómo se respaldan los datos?": "How are the data backed up?",
+    "La base se respalda todos los días de forma automática y cifrada, con una copia en la nube y otra local, y con un procedimiento de restauración probado. Además, usted puede exportar todos sus datos en formato abierto cuando quiera, sin pedir permiso ni esperar a nadie. Esa exportación es su copia independiente: aunque mañana desapareciéramos, sus datos seguirían siendo suyos y legibles.": "The database is backed up automatically and encrypted every day, with one copy in the cloud and another stored locally, and with a tested recovery procedure. Plus, you can export all your data in an open format whenever you want, without asking permission or waiting for anyone. That export is your independent backup: even if we disappeared tomorrow, your data would still be yours and readable.",
     "\"345W\" es simplemente la forma de nombrar la familia completa. Lo importante no es la sigla: es que": "\"345W\" is simply the name for the whole family. The acronym is not what matters: what matters is that",
     "\"Preferencias de cookies\"": "\"Cookie preferences\"",
     "(precios, propuesta, seguimiento)": "(pricing, proposal, follow-up)",
@@ -534,8 +536,6 @@
     "La aplicación por dentro": "Inside the app",
     "La auditoría corre sola cada vez que entra un lote. Los hallazgos de riesgo alto impiden cerrar el periodo hasta que alguien los resuelva o los justifique por escrito.": "The audit runs on its own every time a batch comes in. High-risk findings block the period from closing until someone resolves them or justifies them in writing.",
     "La auditoría corre sola sobre todo el periodo. Cada hallazgo indica el registro exacto y la acción sugerida.": "The audit runs on its own across the whole period. Each finding points to the exact record and the suggested action.",
-    "La base se respalda cifrada, con un procedimiento de restauración probado. Además, usted puede exportar todos sus datos en formato abierto cuando quiera, sin pedir permiso ni esperar a nadie. Esa exportación es su copia independiente: aunque mañana desapareciéramos, sus datos seguirían siendo suyos y legibles.": "The database is backed up encrypted, with a proven recovery procedure. Plus, you can export all your data in an open format whenever you want, without asking permission or waiting for anyone. That export is your independent backup: even if we disappeared tomorrow, your data would still be yours and readable.",
-    "La base tiene respaldo automático diario, y además puede exportar todos sus datos en formato abierto cuando quiera, sin pedir permiso ni esperar a nadie. Esa exportación es su copia de seguridad independiente: aunque mañana desapareciera el servicio, sus datos siguen siendo utilizables.": "The database is backed up automatically every day, and you can also export all your data in an open format whenever you want, without asking permission or waiting for anyone. That export is your independent backup: even if the service disappeared tomorrow, your data stays usable.",
     "La desagregación no suma el total": "The disaggregation doesn't add up to the total",
     "La desagregación por edad suma exactamente el total de cada fila.": "Age disaggregation adds up exactly to each row's total.",
     "La desagregación por sexo suma exactamente el total de cada fila.": "Sex disaggregation adds up exactly to each row's total.",
@@ -1182,10 +1182,8 @@
     "· sector salud": "· health sector",
     "¿A cuántas personas distintas llegó el proyecto? Es la que va a la 345W y la que el donante usa para medir cobertura. Nunca se suma entre meses ni entre actividades.": "How many different people did the project reach? This is the figure that goes into the 345W and the one the donor uses to measure coverage. It is never summed across months or activities.",
     "¿Alguna duda sobre esto?": "Any questions about this?",
-    "¿Con qué frecuencia se hacen respaldos?": "How often are backups made?",
     "¿Cuántas personas registran datos en terreno?": "How many people record data in the field?",
     "¿Cuánto trabajo se hizo? Sirve para medir intensidad y carga operativa. Esta sí se suma.": "How much work was done? It measures intensity and operational load. This one is summed.",
-    "¿Cómo se respaldan los datos?": "How are the data backed up?",
     "¿Dónde se alojan los datos y quién los puede ver?": "Where is the data hosted and who can see it?",
     "¿Funciona si en la zona no hay internet?": "Does it work where there is no internet?",
     "¿La 345W sale lista para subir a la plataforma?": "Does the 345W come out ready to upload to the platform?",
