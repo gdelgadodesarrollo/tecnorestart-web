@@ -7,22 +7,25 @@
 
   var rail = function (activo) {
     var grupos = [
-      ['Trabajo del mes', [
-        ['Panel del mes', 'panel'],
+      ['', [
+        ['Panel del mes', 'panel']
+      ]],
+      ['Terreno', [
+        ['Registro de asistencia', 'movil'],
+        ['Coordinación', 'coord', '3'],
+        ['Planificación de terreno', 'plan']
+      ]],
+      ['Datos', [
         ['Cargar formularios', 'carga'],
-        ['Registro móvil', 'movil'],
-        ['Actividades de terreno', 'terreno']
+        ['Personas', 'personas'],
+        ['Auditar datos', 'auditoria', '12']
       ]],
-      ['Calidad del dato', [
-        ['Auditar datos', 'auditoria', '12'],
-        ['Cargas y rechazos', 'lotes'],
-        ['Personas', 'personas']
+      ['Proyecto', [
+        ['Plan MEAL / IPTT', 'iptt']
       ]],
-      ['Resultados', [
-        ['Indicadores IPTT', 'iptt'],
-        ['Reporte de atenciones', 'alcance'],
-        ['Reportes 345W', 'reportes'],
-        ['Informe al donante', 'informe'],
+      ['Reportes', [
+        ['Informe narrativo mensual', 'informe'],
+        ['Plataforma 345W', 'reportes'],
         ['Power BI', 'powerbi']
       ]]
     ];
@@ -30,7 +33,7 @@
       '<div class="app-rail-logo"><b>MEAL</b><span>Proyecto Norte 2026</span><em>Organización Demo</em></div>' +
       '<nav class="app-nav">';
     grupos.forEach(function (g) {
-      h += '<div class="app-nav-grupo">' + g[0] + '</div>';
+      if (g[0]) h += '<div class="app-nav-grupo">' + g[0] + '</div>';
       g[1].forEach(function (it) {
         h += '<a href="#pantallas" class="' + (it[1] === activo ? 'activo' : '') + '">' +
           '<span class="punto"></span>' + it[0] +
@@ -257,15 +260,15 @@
   /* ── Reportes 345W ──────────────────────────────────────────────────── */
   var REPORTES = marco('reportes',
     '<div class="app-h">' +
-      '<div><h4>Reportes y exportaciones</h4><p>Todo sale del mismo dato ya auditado · periodo Septiembre 2026</p></div>' +
-      '<div style="display:flex;gap:.35rem"><span class="app-btn">Programar envío</span><span class="app-btn pri">Generar 345W</span></div>' +
+      '<div><h4>Plataforma 345W</h4><p>Exportación al portal de coordinación OCHA · validada contra las 67 columnas de la plantilla</p></div>' +
+      '<div style="display:flex;gap:.35rem"><span class="app-btn">Formato plantilla</span><span class="app-btn pri">&#8681; Exportar 345W</span></div>' +
     '</div>' +
 
     '<div class="app-kpis" style="margin-bottom:.9rem">' +
-      '<div class="app-kpi"><b>412</b><span>Filas en la matriz 345W</span><em>con coordenadas</em></div>' +
-      '<div class="app-kpi verde"><b>23</b><span>Lugares reportados</span><em>georreferenciados</em></div>' +
-      '<div class="app-kpi morado"><b>6</b><span>Sectores de intervención</span><em>según clúster</em></div>' +
-      '<div class="app-kpi"><b>0</b><span>Ajustes manuales</span><em>nada se recalcula a mano</em></div>' +
+      '<div class="app-kpi"><b>92</b><span>Filas en la matriz 345W</span><em>mes × indicador × lugar</em></div>' +
+      '<div class="app-kpi verde"><b>1.247</b><span>Personas nuevas</span><em>cuadre exacto con la base</em></div>' +
+      '<div class="app-kpi morado"><b>67</b><span>Columnas validadas</span><em>pcodes y 18 franjas de edad</em></div>' +
+      '<div class="app-kpi verde"><b>0</b><span>Errores de validación</span><em>verificador independiente</em></div>' +
     '</div>' +
 
     '<div class="app-tarjeta" style="margin-bottom:.8rem">' +
@@ -304,8 +307,63 @@
           '<tr><td>Reporte de atenciones</td><td class="num"><span class="badge verde">.xlsx</span></td></tr>' +
           '<tr><td>Reporte de trabajo con coordenadas</td><td class="num"><span class="badge verde">.xlsx</span></td></tr>' +
           '<tr><td>Dataset anónimo Power BI</td><td class="num"><span class="badge morado">.csv</span></td></tr>' +
-          '<tr><td>Informe narrativo (borrador)</td><td class="num"><span class="badge azul">.docx</span></td></tr>' +
+          '<tr><td>Informe narrativo mensual</td><td class="num"><span class="badge azul">.docx</span></td></tr>' +
         '</tbody></table></div>' +
+      '</div>' +
+    '</div>'
+  );
+
+  /* ── Informe narrativo mensual ──────────────────────────────────────── */
+  var secciones = [
+    ['Tabla de indicadores', 'Cifras de la base', 'azul'],
+    ['Indicador 1 · Protección de NNA', 'Lista', 'verde'],
+    ['Indicador 2 · Salud mental (SMAPS)', 'Lista', 'verde'],
+    ['Indicador 3 · Violencia basada en género', 'Lista', 'verde'],
+    ['Indicador 4 · Gestión de casos', 'Lista', 'verde'],
+    ['Indicador 5 · Asesoría legal', 'Lista', 'verde'],
+    ['Sensibilizaciones', 'Lista', 'verde'],
+    ['Dificultades y cuellos de botella', 'Por revisar', 'ambar'],
+    ['Camino a seguir', 'Lista', 'verde']
+  ];
+  var INFORME = marco('informe',
+    '<div class="app-h">' +
+      '<div><h4>Informe narrativo mensual</h4><p>Redacción con IA sobre cifras de la base · Septiembre 2026</p></div>' +
+      '<div style="display:flex;gap:.35rem"><span class="app-btn">&#8681; Descargar Word</span><span class="app-btn pri">&#10024; Redactar septiembre</span></div>' +
+    '</div>' +
+
+    '<div class="app-pasos">' +
+      '<div class="app-paso hecho"><b>PASO 1</b><span>Biblioteca</span><em>informes enviados y metas</em></div>' +
+      '<div class="app-paso hecho"><b>PASO 2</b><span>Informes de coordinación</span><em>3 documentos del mes</em></div>' +
+      '<div class="app-paso activo"><b>PASO 3</b><span>Redacción con IA</span><em>9 de 9 secciones · 1 por revisar</em></div>' +
+      '<div class="app-paso"><b>PASO 4</b><span>Presupuesto y fotos</span><em>pendiente</em></div>' +
+    '</div>' +
+
+    '<div class="app-2col">' +
+      '<div class="app-tarjeta">' +
+        '<div class="app-tarjeta-h"><h5>Secciones del informe</h5><span>cifras: el sistema · análisis: la IA</span></div>' +
+        '<div class="app-tarjeta-b plano"><table class="app-tabla"><tbody>' +
+          secciones.map(function (x) {
+            return '<tr><td>' + x[0] + '</td><td class="num"><span class="badge ' + x[2] + '">' + x[1] + '</span></td></tr>';
+          }).join('') +
+        '</tbody></table></div>' +
+      '</div>' +
+      '<div style="display:grid;gap:.8rem;align-content:start">' +
+        '<div class="app-tarjeta">' +
+          '<div class="app-tarjeta-h"><h5>Indicador 2 · Salud mental (SMAPS)</h5><span>redactado por IA</span></div>' +
+          '<div class="app-tarjeta-b" style="font-size:.74rem;line-height:1.6;color:var(--texto-70)">' +
+            'Durante septiembre se sumaron <b style="background:var(--azul-tenue);color:var(--azul);padding:0 .25rem;border-radius:3px">342 personas nuevas</b> al servicio. ' +
+            'Las sesiones grupales se concentraron en el manejo del estrés y el autocuidado ' +
+            '<span class="badge azul">Coord. SMAPS · p. 2</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="app-tarjeta">' +
+          '<div class="app-tarjeta-h"><h5>Antes de aprobar</h5><span>controles del servidor</span></div>' +
+          '<div class="app-tarjeta-b" style="display:grid;gap:.4rem">' +
+            '<div class="app-mensaje azul"><b>Las cifras</b> las escribe el sistema desde la base, nunca la IA.</div>' +
+            '<div class="app-mensaje azul"><b>Cada frase</b> cita el pasaje del informe de coordinación.</div>' +
+            '<div class="app-mensaje ambar"><b>1 sección por revisar:</b> hasta resolverla no se puede aprobar.</div>' +
+          '</div>' +
+        '</div>' +
       '</div>' +
     '</div>'
   );
@@ -353,6 +411,7 @@
     auditoria: AUDITORIA,
     iptt: IPTT,
     reportes: REPORTES,
+    informe: INFORME,
     movil: MOVIL
   };
 })();

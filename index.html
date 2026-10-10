@@ -3,36 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TecnoRestart MEAL — Del formulario en papel al informe del donante</title>
-<meta name="description" content="Plataforma MEAL para organizaciones sociales: captura móvil sin internet, validación automática de formularios, indicadores IPTT en vivo y reportes 345W listos para el donante.">
-<meta name="theme-color" content="#1a56db">
+<title>TecnoRestart MEAL — La 345W en 60 segundos. El informe mensual, en un clic.</title>
+<meta name="description" content="Plataforma MEAL para organizaciones sociales: la matriz 345W validada en un minuto, el informe mensual redactado con IA en un clic, captura móvil sin internet e indicadores IPTT en vivo. Pruébela un mes con todo incluido.">
+<meta name="theme-color" content="#05070f">
 <link rel="canonical" href="https://tecnorestart.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TecnoRestart MEAL">
 <meta property="og:locale" content="es_LA">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://tecnorestart.com/">
-<meta property="og:title" content="TecnoRestart MEAL — Del formulario en papel al informe del donante">
-<meta property="og:description" content="Captura en terreno sin internet, validación automática y reportes al donante en minutos, no en semanas.">
+<meta property="og:title" content="La 345W en 60 segundos. El informe mensual, en un clic.">
+<meta property="og:description" content="Plataforma MEAL para organizaciones sociales. Véala funcionando y pruébela un mes con todos los módulos incluidos.">
 <meta property="og:image" content="https://tecnorestart.com/assets/og.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Panel de TecnoRestart MEAL con indicadores del mes">
+<meta property="og:image:alt" content="La 345W en 60 segundos y el informe mensual en un clic, con TecnoRestart MEAL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TecnoRestart MEAL — Del formulario en papel al informe del donante">
-<meta name="twitter:description" content="Captura en terreno sin internet, validación automática y reportes al donante en minutos.">
+<meta name="twitter:title" content="La 345W en 60 segundos. El informe mensual, en un clic.">
+<meta name="twitter:description" content="Plataforma MEAL para organizaciones sociales. Pruébela un mes con todos los módulos incluidos.">
 <meta name="twitter:image" content="https://tecnorestart.com/assets/og.png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/futuro.css">
 <script src="js/i18n.js"></script>
 </head>
-<body>
+<body class="futuro">
 
 <a class="sr-only" href="#principal">Saltar al contenido</a>
+
+<div class="cielo" aria-hidden="true"><i class="au au1"></i><i class="au au2"></i><i class="au au3"></i><i class="malla"></i></div>
 
 <!-- ══ NAV ══════════════════════════════════════════════════════════════ -->
 <header class="nav" id="nav">
@@ -46,17 +49,16 @@
     </button>
     <div class="nav-panel">
       <nav class="nav-links" id="navLinks">
-        <a href="#pantallas">Pantallas</a>
-        <a href="#demos">Cómo funciona</a>
+        <a href="#videos">Videos</a>
+        <a href="#cierre">Cierre de mes</a>
+        <a href="#plataforma">Plataforma</a>
         <a href="#planes">Planes</a>
-        <a href="#guia">Guía</a>
-        <a href="#autor">Quién soy</a>
+        <a href="#guia">Guía 345W</a>
         <a href="#faq">Preguntas</a>
       </nav>
       <div class="nav-cta">
         <span data-i18n-selector></span>
-        <a class="btn sm fantasma" href="#pantallas">Ver la app</a>
-        <a class="btn sm primario" href="#contacto">Pedir demo</a>
+        <a class="btn sm primario" href="#contacto">Probar 1 mes</a>
       </div>
     </div>
   </div>
@@ -65,59 +67,164 @@
 <main id="principal">
 
 <!-- ══ HERO ═════════════════════════════════════════════════════════════ -->
-<section class="hero" id="inicio">
-  <div class="contenedor">
-    <div class="hero-txt">
-      <span class="eyebrow">Plataforma MEAL para organizaciones sociales</span>
-      <h1>Del formulario en papel<br>al <span class="destacado">informe del donante</span></h1>
-      <p class="plomo">Su equipo registra en terreno, aunque no haya señal. La plataforma valida, cruza y consolida. Usted entrega el reporte con la evidencia detrás de cada número — el mismo día, no tres semanas después.</p>
+<section class="f-hero" id="inicio">
+  <div class="contenedor f-hero-rejilla">
+    <div class="f-hero-txt">
+      <a class="f-novedad" href="#cierre"><span class="f-pulso"></span><b>Nuevo</b> Informe mensual redactado con IA, con citas</a>
+      <h1>La 345W en <span class="grad">60&nbsp;segundos</span>.<br>El informe mensual, <span class="grad">en un clic</span>.</h1>
+      <p class="f-lead">Su equipo registra en terreno, aunque no haya señal. La plataforma valida, deduplica y cruza. Usted descarga la matriz para OCHA y el informe del donante, con la evidencia detrás de cada número.</p>
       <div class="acciones">
-        <a class="btn lg primario" href="#contacto">Agendar demo de 20 minutos</a>
-        <a class="btn lg" href="#pantallas">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          Recorrer las pantallas
-        </a>
+        <button class="btn lg primario" type="button" data-ver-video="345w">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>
+          Ver la 345W en 60 segundos
+        </button>
+        <a class="btn lg vidrio" href="#contacto">Probar 1 mes con todo incluido</a>
       </div>
-      <p class="hero-nota">Sin tarjeta · Datos de prueba cargados · Migramos sus planillas actuales</p>
+      <p class="f-nota">Sin tarjeta · Todos los módulos durante la prueba · Migramos sus planillas</p>
     </div>
 
-    <!-- Captura del panel -->
-    <div class="hero-marco revelar">
-      <div class="marco">
-        <div class="marco-barra">
-          <div class="marco-puntos"><i></i><i></i><i></i></div>
-          <div class="marco-url">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-            app.tecnorestart.com/panel
-          </div>
+    <div class="f-hero-visual revelar">
+      <div class="f-pantalla">
+        <div class="f-pantalla-barra"><i></i><i></i><i></i><span>app.tecnorestart.com/plataforma</span></div>
+        <div class="f-pantalla-video">
+          <video id="videoHero" muted loop playsinline preload="none" poster="assets/video/hero.jpg" aria-label="Recorrido del sistema: 345W, informe mensual y captura en terreno">
+            <source src="assets/video/hero.mp4" type="video/mp4">
+          </video>
+          <button class="f-play-sonido" type="button" data-ver-video="345w">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>
+            Ver con narración
+          </button>
+          <span class="f-escaneo" aria-hidden="true"></span>
         </div>
-        <div class="marco-lienzo" data-pantalla="panel"></div>
       </div>
+      <span class="f-flota f1"><i class="ok"></i>0 errores de validación</span>
+      <span class="f-flota f2"><i class="ia"></i>9 de 9 secciones redactadas</span>
+      <span class="f-flota f3"><i class="sin"></i>Sin señal · guardado en el teléfono</span>
     </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="f-cifras revelar">
+      <div class="f-cifra"><b>60 s</b><span>para generar la 345W del mes, validada</span></div>
+      <div class="f-cifra"><b>1 clic</b><span>para redactar las 9 secciones del informe mensual</span></div>
+      <div class="f-cifra"><b>0</b><span>errores de validación contra la plantilla de OCHA</span></div>
+      <div class="f-cifra"><b>67</b><span>columnas con pcodes, coordenadas y 18 franjas de edad</span></div>
+    </div>
+    <p class="f-fuente">Medido en el cierre de septiembre de 2026 de un proyecto humanitario real. Los videos de esta página usan datos ficticios.</p>
   </div>
 </section>
 
-<!-- ══ CONFIANZA ════════════════════════════════════════════════════════ -->
-<section class="confianza">
-  <div class="contenedor confianza-fila">
-    <p>Pensada para el trabajo real de terreno</p>
-    <span class="sello"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0"/><path d="M2 2l20 20" stroke-width="2"/></svg> Funciona sin internet</span>
-    <span class="sello"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Datos personales protegidos</span>
-    <span class="sello"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Exporta 345W, Excel y Power BI</span>
-    <span class="sello"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg> Informe mensual en minutos</span>
-    <span class="sello"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg> Multiproyecto y multiorganización</span>
+<!-- ══ CINTA DE MÓDULOS ═════════════════════════════════════════════════ -->
+<div class="f-cinta" aria-hidden="true">
+  <div class="f-cinta-pista">
+    <span>Plataforma 345W</span><span>Informe mensual con IA</span><span>Captura móvil sin señal</span><span>Indicadores IPTT</span><span>Power BI</span><span>Auditoría automática</span><span>Identidad única</span><span>Informe al donante</span><span>Planificación de terreno</span><span>Verificación en dos pasos</span>
+    <span>Plataforma 345W</span><span>Informe mensual con IA</span><span>Captura móvil sin señal</span><span>Indicadores IPTT</span><span>Power BI</span><span>Auditoría automática</span><span>Identidad única</span><span>Informe al donante</span><span>Planificación de terreno</span><span>Verificación en dos pasos</span>
+  </div>
+</div>
+
+<!-- ══ VIDEOS ═══════════════════════════════════════════════════════════ -->
+<section class="seccion" id="videos">
+  <div class="contenedor">
+    <div class="cabecera-seccion centrado revelar">
+      <span class="eyebrow">Véalo funcionando</span>
+      <h2>El sistema, en movimiento y con narración</h2>
+      <p class="plomo">Recorridos cortos por las pantallas reales del sistema. Active el sonido: cada video explica qué está pasando.</p>
+    </div>
+
+    <div class="f-cine revelar" id="cine">
+      <div class="f-cine-marco">
+        <video id="videoCine" controls playsinline preload="none" poster="assets/video/345w.jpg" crossorigin="anonymous">
+          <source src="assets/video/345w.mp4" type="video/mp4">
+          <track kind="subtitles" srclang="es" label="Español" src="assets/video/345w.es.vtt" default>
+          <track kind="subtitles" srclang="en" label="English" src="assets/video/345w.en.vtt">
+        </video>
+        <button class="f-cine-portada" type="button" id="cinePortada" aria-label="Reproducir el video con narración">
+          <span class="f-cine-play"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg></span>
+          <span class="f-cine-titulo" id="cineTitulo">La 345W en 60 segundos</span>
+          <span class="f-cine-sub">Con narración · subtítulos en español e inglés</span>
+        </button>
+      </div>
+      <div class="f-lista" role="list">
+        <button class="f-item activo" type="button" role="listitem" data-video="345w" data-titulo="La 345W en 60 segundos">
+          <img src="assets/video/345w.jpg" alt="" loading="lazy" width="160" height="90">
+          <span><b>La 345W en 60 segundos</b><em>Exportar, validar y descargar · 1:05</em></span>
+        </button>
+        <button class="f-item" type="button" role="listitem" data-video="informe" data-titulo="El informe mensual, en un clic">
+          <img src="assets/video/informe.jpg" alt="" loading="lazy" width="160" height="90">
+          <span><b>El informe mensual, en un clic</b><em>Redacción con IA y aprobación · 1:00</em></span>
+        </button>
+        <button class="f-item" type="button" role="listitem" data-video="terreno" data-titulo="Del terreno al tablero">
+          <img src="assets/video/terreno.jpg" alt="" loading="lazy" width="160" height="90">
+          <span><b>Del terreno al tablero</b><em>Sin señal, coordinación y panel · 0:53</em></span>
+        </button>
+        <button class="f-item" type="button" role="listitem" data-video="presentacion" data-titulo="Presentación completa">
+          <img src="assets/video/presentacion.jpg" alt="" loading="lazy" width="160" height="90">
+          <span><b>Presentación completa</b><em>Para proyectar en su organización · 3:50</em></span>
+        </button>
+      </div>
+    </div>
+    <p class="f-cine-nota">Recreaciones con datos ficticios y voz neuronal. ¿Quiere mostrarla en su organización? <a href="assets/video/presentacion.mp4" download>Descargue la presentación completa en MP4</a>.</p>
+  </div>
+</section>
+
+<!-- ══ CIERRE DE MES ════════════════════════════════════════════════════ -->
+<section class="seccion f-oscura" id="cierre">
+  <div class="contenedor">
+    <div class="cabecera-seccion centrado revelar">
+      <span class="eyebrow">El cierre de mes, cronometrado</span>
+      <h2>Lo que antes ocupaba la semana de cierre</h2>
+      <p class="plomo">Los dos entregables que más tiempo consumen, resueltos desde el mismo dato auditado.</p>
+    </div>
+
+    <div class="f-duo">
+      <article class="f-panel revelar" data-luz>
+        <div class="f-panel-cab">
+          <span class="f-sello">Plan Premium</span>
+          <b class="f-gigante grad">60 s</b>
+          <h3>La matriz 345W, validada</h3>
+        </div>
+        <ol class="f-pasos">
+          <li><b>Elige el mes y pulsa Exportar.</b> Nada de copiar cifras entre archivos.</li>
+          <li><b>Solo personas nuevas por actividad,</b> ya auditadas y sin duplicados.</li>
+          <li><b>Valida las 67 columnas</b> de la plantilla de OCHA: pcodes, coordenadas y 18 franjas de sexo y edad.</li>
+          <li><b>Si algo no cuadra, se bloquea</b> y dice qué falta. La IA propone la correspondencia y usted decide.</li>
+          <li><b>Excel listo para subir,</b> en formato de importación o de plantilla, revisado por un verificador independiente.</li>
+        </ol>
+        <button class="btn vidrio" type="button" data-ver-video="345w">Ver el video de la 345W</button>
+      </article>
+
+      <article class="f-panel revelar" data-luz>
+        <div class="f-panel-cab">
+          <span class="f-sello">Plan Premium</span>
+          <b class="f-gigante grad">1 clic</b>
+          <h3>El informe narrativo mensual</h3>
+        </div>
+        <ol class="f-pasos">
+          <li><b>Las cifras las escribe el sistema,</b> desde la base. Nunca la IA.</li>
+          <li><b>La IA redacta el análisis</b> a partir de los informes de coordinación y cita el pasaje de cada frase.</li>
+          <li><b>Un verificador rechaza</b> cualquier número o nombre inventado y pide otro intento.</li>
+          <li><b>Con secciones pendientes no se puede aprobar.</b> Usted revisa, ajusta y firma.</li>
+          <li><b>Word sobre la plantilla oficial</b> del donante, con presupuesto y anexo fotográfico.</li>
+        </ol>
+        <button class="btn vidrio" type="button" data-ver-video="informe">Ver el video del informe</button>
+      </article>
+    </div>
+
+    <p class="f-extra revelar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+      <span><b>Y para el trimestre:</b> el informe de progreso al donante se escribe dentro de la plantilla de OCHA, con las cifras de la base.</span>
+    </p>
   </div>
 </section>
 
 <!-- ══ ANTES / DESPUÉS ══════════════════════════════════════════════════ -->
-<section class="seccion suave" id="producto">
+<section class="seccion" id="producto">
   <div class="contenedor">
     <div class="cabecera-seccion centrado revelar">
       <span class="eyebrow">El problema</span>
       <h2>El dato existe. El problema es llegar a él.</h2>
-      <p class="plomo">Nadie duda del trabajo que hace su equipo en terreno. Lo que se pierde es la trazabilidad: quién atendió a quién, cuándo, con qué resultado — y cómo probarlo cuando el donante pregunta.</p>
+      <p class="plomo">Nadie duda del trabajo que hace su equipo en terreno. Lo que se pierde es la trazabilidad: quién atendió a quién, cuándo, con qué resultado, y cómo probarlo cuando el donante pregunta.</p>
     </div>
-
     <div class="ad revelar">
       <div class="ad-col antes">
         <h3>
@@ -128,9 +235,9 @@
           <li><i>×</i> Planillas de papel que viajan días hasta la oficina y a veces no llegan.</li>
           <li><i>×</i> Catorce archivos de Excel, tres versiones de cada uno, ninguna final.</li>
           <li><i>×</i> La misma persona contada cuatro veces porque escribió su nombre distinto.</li>
-          <li><i>×</i> Cierre de mes: una semana completa copiando y pegando cifras.</li>
+          <li><i>×</i> La 345W armada a mano, celda por celda, y devuelta por el clúster.</li>
+          <li><i>×</i> El informe mensual escrito desde cero, copiando tablas a mano.</li>
           <li><i>×</i> El donante pide la evidencia de un número y nadie sabe de dónde salió.</li>
-          <li><i>×</i> Los errores se descubren cuando el informe ya se envió.</li>
         </ul>
       </div>
       <div class="ad-flecha">
@@ -145,98 +252,97 @@
           <li><i>✓</i> El registro se hace en el celular, en el momento, con o sin señal.</li>
           <li><i>✓</i> Una sola base. Un solo número. Una sola versión de la verdad.</li>
           <li><i>✓</i> Identidad única por persona: se atienda donde se atienda, es la misma.</li>
-          <li><i>✓</i> Cierre de mes en una tarde, con los rechazos ya resueltos.</li>
-          <li><i>✓</i> Cada cifra del informe abre el registro que la sustenta.</li>
-          <li><i>✓</i> El sistema avisa del error antes de que llegue al reporte.</li>
+          <li><i>✓</i> La 345W sale validada en un minuto, con los errores bloqueados antes de subir.</li>
+          <li><i>✓</i> El informe mensual se redacta con un clic y usted solo revisa y aprueba.</li>
+          <li><i>✓</i> Cada cifra abre el registro que la sustenta, incluso meses después.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ FUNCIONES ════════════════════════════════════════════════════════ -->
-<section class="seccion">
+<!-- ══ PLATAFORMA (BENTO) ═══════════════════════════════════════════════ -->
+<section class="seccion f-oscura" id="plataforma">
   <div class="contenedor">
     <div class="cabecera-seccion centrado revelar">
       <span class="eyebrow">Lo que incluye</span>
-      <h2>Todo el ciclo MEAL en una sola plataforma</h2>
-      <p class="plomo">Nada de módulos sueltos que no se hablan entre sí. Los datos entran una vez y recorren todo el camino hasta el informe.</p>
+      <h2>Una plataforma, cinco frentes de trabajo</h2>
+      <p class="plomo">Los datos entran una vez y recorren todo el camino hasta el informe. Estos son los módulos que su equipo usará.</p>
     </div>
 
-    <div class="func-rejilla revelar">
-      <article class="func">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
-        <h3>Captura móvil sin internet</h3>
-        <p>El promotor registra la asistencia en el celular, en medio del terreno. Los datos quedan guardados en el teléfono y se suben solos cuando vuelve la señal. Nadie espera a nadie.</p>
+    <div class="f-bento revelar">
+      <article class="f-caja terreno" data-luz>
+        <div class="f-caja-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+        <h3>Terreno</h3>
+        <ul>
+          <li>Captura móvil sin señal, con envío automático al volver la conexión</li>
+          <li>Foto de la lista leída con IA y cotejada con los totales declarados</li>
+          <li>«¿Ya la atendimos?» sin conexión, para no inflar las personas nuevas</li>
+          <li>Coordinación revisa, corrige y aprueba o devuelve con motivo</li>
+          <li>Planificación semanal y visita diagnóstica con punto GPS</li>
+        </ul>
       </article>
-
-      <article class="func v">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div>
-        <h3>Carga y validación de formularios</h3>
-        <p>Arrastra el Excel o el formulario del mes y el motor lo convierte en registros. Lo que no cuadra no entra: se separa en una bandeja de rechazos con el motivo exacto y la fila donde ocurrió.</p>
+      <article class="f-caja datos" data-luz>
+        <div class="f-caja-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+        <h3>Datos</h3>
+        <ul>
+          <li>Carga de Excel con vista previa y corrección guiada por problema</li>
+          <li>Identidad única con fonética del español: la misma persona, una sola vez</li>
+          <li>Auditoría con revisión automática de duplicados y edades</li>
+          <li>Excluir sin borrar: todo queda con motivo y en la bitácora</li>
+        </ul>
       </article>
-
-      <article class="func a">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
-        <h3>Auditoría automática de datos</h3>
-        <p>Duplicados, edades imposibles, sexo en blanco, actividades sin lugar, totales que no suman. La plataforma los marca antes del cierre, no después del reclamo.</p>
+      <article class="f-caja reportes" data-luz>
+        <div class="f-caja-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-5 3.5 3.5L21 6"/></svg></div>
+        <h3>Reportes</h3>
+        <ul>
+          <li><b>Plataforma 345W</b> validada y lista para subir</li>
+          <li><b>Informe mensual</b> redactado con IA sobre la plantilla oficial</li>
+          <li><b>Informe de progreso al donante</b>, trimestral o de cierre</li>
+          <li>Matriz de avance y tabla de gestión en vivo, con descarga en Excel</li>
+          <li>Alcance sin doble conteo y dataset anónimo para Power BI</li>
+        </ul>
+        <span class="f-caja-sello">El corazón del cierre de mes</span>
       </article>
-
-      <article class="func m">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
-        <h3>Identidad única de beneficiarios</h3>
-        <p>Cada persona tiene un identificador a nivel de organización. Se atienda en el proyecto que se atienda, el sistema sabe que es la misma — y deja de inflar los alcances.</p>
+      <article class="f-caja proyecto" data-luz>
+        <div class="f-caja-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+        <h3>Proyecto</h3>
+        <ul>
+          <li>Plan MEAL e IPTT: la IA extrae los indicadores de sus documentos, con cita</li>
+          <li>Metas, alcanzado y acumulado por mes, con un solo semáforo</li>
+          <li>Multiproyecto: cada intervención aislada del resto</li>
+        </ul>
       </article>
-
-      <article class="func">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-5 3.5 3.5L21 6"/></svg></div>
-        <h3>Indicadores IPTT en vivo</h3>
-        <p>Metas, avance y brecha por indicador, desagregados por sexo, edad, lugar y periodo. Sabe cómo va a mitad de mes, no cuando ya no hay nada que corregir.</p>
-      </article>
-
-      <article class="func v">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h3>Actividades de terreno georreferenciadas</h3>
-        <p>Lugar, coordenadas y fecha en cada actividad, tomados de la agenda real. El catálogo reconoce el nombre mal escrito y propone el lugar correcto en lugar de crear uno nuevo.</p>
-      </article>
-
-      <article class="func a">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <h3>Exportación 345W y Power BI</h3>
-        <p>La matriz 345W que pide el clúster sale con un clic, incluidas coordenadas. Y un dataset anónimo alimenta sus tableros sin exponer datos personales.</p>
-      </article>
-
-      <article class="func m">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.6 6.6L21 9.8l-4.8 4.5 1.3 6.7L12 17.8 6.5 21l1.3-6.7L3 9.8l6.4-1.2z"/></svg></div>
-        <h3>Informe narrativo asistido</h3>
-        <p>La plataforma arma el borrador del informe con las cifras ya cruzadas y el texto de contexto. Su equipo redacta el análisis; nadie vuelve a transcribir tablas a mano.</p>
-      </article>
-
-      <article class="func r">
-        <div class="func-icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-        <h3>Bandeja única de revisión</h3>
-        <p>Todo lo que requiere una decisión humana —rechazos, duplicados posibles, lugares nuevos— llega a un solo lugar. Se resuelve ahí y el dato sigue su camino.</p>
+      <article class="f-caja gobierno" data-luz>
+        <div class="f-caja-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Gobierno de datos</h3>
+        <ul>
+          <li>Verificación en dos pasos y bitácora que no se puede borrar</li>
+          <li>16 roles, con un auditor del donante de solo lectura</li>
+          <li>Cierre y reapertura de meses con historial</li>
+        </ul>
       </article>
     </div>
   </div>
 </section>
 
 <!-- ══ PANTALLAS ════════════════════════════════════════════════════════ -->
-<section class="seccion suave linea" id="pantallas">
+<section class="seccion" id="pantallas">
   <div class="contenedor">
     <div class="cabecera-seccion centrado revelar">
       <span class="eyebrow">La aplicación por dentro</span>
-      <h2>Pantallas reales, no maquetas bonitas</h2>
-      <p class="plomo">Recorra los módulos que su equipo usará todos los días. Los datos que ve son de demostración.</p>
+      <h2>Recorra las pantallas</h2>
+      <p class="plomo">Los módulos que su equipo usará todos los días. Los datos que ve son de demostración.</p>
     </div>
 
     <div class="pest" role="tablist" aria-label="Pantallas de la aplicación">
       <button role="tab" aria-selected="true" aria-controls="p-panel" id="t-panel" data-tab="panel">Panel del mes</button>
+      <button role="tab" aria-selected="false" aria-controls="p-reportes" id="t-reportes" data-tab="reportes">Plataforma 345W</button>
+      <button role="tab" aria-selected="false" aria-controls="p-informe" id="t-informe" data-tab="informe">Informe mensual</button>
       <button role="tab" aria-selected="false" aria-controls="p-carga" id="t-carga" data-tab="carga">Cargar formularios</button>
       <button role="tab" aria-selected="false" aria-controls="p-auditoria" id="t-auditoria" data-tab="auditoria">Auditar datos</button>
       <button role="tab" aria-selected="false" aria-controls="p-iptt" id="t-iptt" data-tab="iptt">Indicadores IPTT</button>
       <button role="tab" aria-selected="false" aria-controls="p-movil" id="t-movil" data-tab="movil">Registro móvil</button>
-      <button role="tab" aria-selected="false" aria-controls="p-reportes" id="t-reportes" data-tab="reportes">Reportes 345W</button>
     </div>
 
     <div class="revelar">
@@ -247,7 +353,20 @@
         </div>
         <p class="pantalla-pie">Una sola vista para saber en qué punto del mes está: qué se cargó, qué falta auditar y cuánto se avanzó contra la meta.</p>
       </div>
-
+      <div class="panel-pantalla" id="p-reportes" role="tabpanel" aria-labelledby="t-reportes" hidden>
+        <div class="marco">
+          <div class="marco-barra"><div class="marco-puntos"><i></i><i></i><i></i></div><div class="marco-url">app.tecnorestart.com/plataforma</div></div>
+          <div class="marco-lienzo" data-pantalla="reportes"></div>
+        </div>
+        <p class="pantalla-pie">La matriz 345W sale del mismo dato auditado, validada contra la plantilla. Si algo falta, la exportación se bloquea y dice qué.</p>
+      </div>
+      <div class="panel-pantalla" id="p-informe" role="tabpanel" aria-labelledby="t-informe" hidden>
+        <div class="marco">
+          <div class="marco-barra"><div class="marco-puntos"><i></i><i></i><i></i></div><div class="marco-url">app.tecnorestart.com/informe</div></div>
+          <div class="marco-lienzo" data-pantalla="informe"></div>
+        </div>
+        <p class="pantalla-pie">Un clic redacta las nueve secciones. Las cifras vienen de la base; la IA redacta el análisis y cita su fuente; usted aprueba.</p>
+      </div>
       <div class="panel-pantalla" id="p-carga" role="tabpanel" aria-labelledby="t-carga" hidden>
         <div class="marco">
           <div class="marco-barra"><div class="marco-puntos"><i></i><i></i><i></i></div><div class="marco-url">app.tecnorestart.com/convertir</div></div>
@@ -255,7 +374,6 @@
         </div>
         <p class="pantalla-pie">Arrastra el archivo del mes y el motor le dice, fila por fila, qué entró y qué no. Los rechazos quedan con motivo y se corrigen sin volver a cargar todo.</p>
       </div>
-
       <div class="panel-pantalla" id="p-auditoria" role="tabpanel" aria-labelledby="t-auditoria" hidden>
         <div class="marco">
           <div class="marco-barra"><div class="marco-puntos"><i></i><i></i><i></i></div><div class="marco-url">app.tecnorestart.com/auditoria</div></div>
@@ -263,15 +381,13 @@
         </div>
         <p class="pantalla-pie">La auditoría corre sola sobre todo el periodo. Cada hallazgo indica el registro exacto y la acción sugerida.</p>
       </div>
-
       <div class="panel-pantalla" id="p-iptt" role="tabpanel" aria-labelledby="t-iptt" hidden>
         <div class="marco">
           <div class="marco-barra"><div class="marco-puntos"><i></i><i></i><i></i></div><div class="marco-url">app.tecnorestart.com/iptt</div></div>
           <div class="marco-lienzo" data-pantalla="iptt"></div>
         </div>
-        <p class="pantalla-pie">Metas contra avance real, con semáforo. Verde va bien, ámbar hay que empujar, rojo hay que hablarlo ahora — no en el informe final.</p>
+        <p class="pantalla-pie">Metas contra avance real, con semáforo. Verde va bien, ámbar hay que empujar, rojo hay que hablarlo ahora, no en el informe final.</p>
       </div>
-
       <div class="panel-pantalla" id="p-movil" role="tabpanel" aria-labelledby="t-movil" hidden>
         <div class="duo">
           <div class="fono">
@@ -279,257 +395,75 @@
           </div>
           <div style="max-width:380px">
             <h3 style="margin-bottom:.7rem">Diseñada para usarse de pie, con una mano y sin señal</h3>
-            <p style="font-size:.93rem;color:var(--texto-45);line-height:1.68;margin-bottom:1rem">El promotor abre la lista del día, marca quién asistió y guarda. Si no hay datos, el registro queda en el teléfono con su sello de hora y se sincroniza solo cuando aparece la señal.</p>
+            <p class="pantalla-txt">El promotor abre la lista del día, fotografía la planilla firmada y guarda. Si no hay datos, el registro queda en el teléfono con su sello de hora y lugar, y se envía solo cuando aparece la señal.</p>
             <ul class="ad-lista" style="gap:.55rem">
-              <li><i style="color:var(--verde)">✓</i> Lista precargada desde la agenda del proyecto</li>
-              <li><i style="color:var(--verde)">✓</i> Personas ya conocidas: no se vuelven a tipear</li>
-              <li><i style="color:var(--verde)">✓</i> Alta rápida del participante nuevo</li>
+              <li><i style="color:var(--verde)">✓</i> Lista precargada desde la planificación del proyecto</li>
+              <li><i style="color:var(--verde)">✓</i> Foto de la planilla como verificador, leída con IA</li>
+              <li><i style="color:var(--verde)">✓</i> Personas ya atendidas: no cuentan otra vez como nuevas</li>
               <li><i style="color:var(--verde)">✓</i> Fecha, lugar y coordenada tomadas automáticamente</li>
-              <li><i style="color:var(--verde)">✓</i> Cola de sincronización visible: se ve qué falta subir</li>
+              <li><i style="color:var(--verde)">✓</i> Cola de envío visible y reintento sin duplicados</li>
             </ul>
           </div>
         </div>
         <p class="pantalla-pie">Un promotor con un celular de gama baja y sin plan de datos puede registrar una jornada entera.</p>
       </div>
-
-      <div class="panel-pantalla" id="p-reportes" role="tabpanel" aria-labelledby="t-reportes" hidden>
-        <div class="marco">
-          <div class="marco-barra"><div class="marco-puntos"><i></i><i></i><i></i></div><div class="marco-url">app.tecnorestart.com/reportes</div></div>
-          <div class="marco-lienzo" data-pantalla="reportes"></div>
-        </div>
-        <p class="pantalla-pie">La matriz 345W, el reporte de alcance y el dataset para Power BI salen del mismo dato auditado. Sin recalcular nada a mano.</p>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ══ DEMOS ════════════════════════════════════════════════════════════ -->
-<section class="seccion tinta" id="demos">
+<!-- ══ IA RESPONSABLE ═══════════════════════════════════════════════════ -->
+<section class="seccion f-oscura" id="ia">
   <div class="contenedor">
     <div class="cabecera-seccion centrado revelar">
-      <span class="eyebrow">En movimiento</span>
-      <h2>Tres recorridos de treinta segundos</h2>
-      <p class="plomo">No hace falta que le expliquen el sistema. Vea cómo se mueve el dato desde que se registra hasta que se entrega.</p>
+      <span class="eyebrow">Inteligencia artificial con evidencia</span>
+      <h2>La IA redacta. Las cifras no las toca.</h2>
+      <p class="plomo">La IA está para ahorrarle horas, no para inventar resultados. Por eso trabaja con reglas que el donante puede auditar.</p>
     </div>
-
-    <div class="demos-rejilla revelar">
-
-      <!-- Demo 1 -->
-      <article class="demo" data-demo="papel">
-        <div class="demo-cabecera">
-          <h3>Del papel al registro <span class="demo-dur">0:12</span></h3>
-          <p>Una planilla de asistencia escrita a mano se vuelve dato verificable.</p>
-        </div>
-        <div class="demo-escena" data-escena>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="papel">
-              LISTA DE ASISTENCIA — TALLER 04<br>
-              01 <span class="escrito">M. Rojas Cabral</span> · 34 · F<br>
-              02 <span class="escrito">J. Benítez</span> · 19 · M<br>
-              03 <span class="escrito">A. Duarte Mora</span> · 41 · F<br>
-              04 <span class="escrito">L. Vera</span> · 08 · M<br>
-              05 <span class="escrito">C. Ayala</span> · — · F
-              <div class="escaner"></div>
-            </div>
-            <div class="pieza" style="text-align:center">
-              <span class="badge azul">Leyendo la planilla…</span>
-            </div>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza">
-              <div class="pieza-t">Filas reconocidas</div>
-              <div class="lineas-detectadas">
-                <div class="linea-det"><span class="ok">✓</span> M. Rojas Cabral · 34 · F</div>
-                <div class="linea-det"><span class="ok">✓</span> J. Benítez · 19 · M</div>
-                <div class="linea-det"><span class="ok">✓</span> A. Duarte Mora · 41 · F</div>
-                <div class="linea-det"><span class="ok">✓</span> L. Vera · 08 · M</div>
-                <div class="linea-det"><span class="mal">!</span> C. Ayala · edad vacía</div>
-              </div>
-            </div>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza">
-              <div class="pieza-t">Resultado de la carga</div>
-              <div style="display:grid;gap:.4rem">
-                <div class="app-mensaje verde"><b>4 registros aceptados</b> — vinculados a personas ya existentes.</div>
-                <div class="app-mensaje ambar"><b>1 rechazo</b> — falta la edad. Enviado a la bandeja de revisión.</div>
-                <div class="app-mensaje azul">Nada se pierde: el rechazo se corrige y entra sin volver a cargar el archivo.</div>
-              </div>
-            </div>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza" style="text-align:center;padding:1.2rem">
-              <div class="pieza-t">Atenciones del taller</div>
-              <div class="contador" data-contador="5">0</div>
-              <p style="font-size:.74rem;color:var(--texto-45);margin-top:.4rem">ya sumadas al indicador del mes</p>
-            </div>
-          </div>
-        </div>
-        <div class="demo-pie">
-          <button class="demo-play" data-play aria-label="Pausar o reanudar"></button>
-          <div class="demo-pista" data-pista></div>
-          <span class="demo-rotulo" data-rotulo></span>
-        </div>
-      </article>
-
-      <!-- Demo 2 -->
-      <article class="demo" data-demo="offline">
-        <div class="demo-cabecera">
-          <h3>Terreno sin señal <span class="demo-dur">0:12</span></h3>
-          <p>El registro no se detiene porque no haya cobertura.</p>
-        </div>
-        <div class="demo-escena" data-escena>
-          <div class="demo-cuadro" data-cuadro>
-            <div style="text-align:center">
-              <span class="sin-senal">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.55a11 11 0 0 1 14.08 0M8.53 16.11a6 6 0 0 1 6.95 0M2 2l20 20"/></svg>
-                Sin conexión · Comunidad rural
-              </span>
-            </div>
-            <div class="mini-fono">
-              <div class="mini-fono-p">
-                <div class="mini-fila"><i></i> Asistencia 08:40</div>
-                <div class="mini-fila"><i></i> Asistencia 09:15</div>
-                <div class="mini-fila"><i></i> Actividad 10:02</div>
-                <div class="mini-fila"><i></i> Asistencia 11:30</div>
-              </div>
-            </div>
-            <p style="font-size:.72rem;color:var(--tinta-txt);text-align:center">Guardado en el teléfono</p>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza" style="text-align:center;padding:1.2rem">
-              <div class="pieza-t">Registros en cola</div>
-              <div class="contador" data-contador="47">0</div>
-              <p style="font-size:.74rem;color:var(--texto-45);margin-top:.4rem">una jornada completa de trabajo, sin un solo byte de datos móviles</p>
-            </div>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div style="text-align:center">
-              <span class="con-senal">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-                Señal recuperada
-              </span>
-            </div>
-            <div class="mini-fono">
-              <div class="mini-fono-p">
-                <div class="mini-fila ok"><i></i> Enviado</div>
-                <div class="mini-fila ok"><i></i> Enviado</div>
-                <div class="mini-fila ok"><i></i> Enviado</div>
-                <div class="mini-fila"><i></i> <span class="giro">↻</span> Enviando…</div>
-              </div>
-            </div>
-            <p style="font-size:.72rem;color:var(--tinta-txt);text-align:center">Sincronización automática</p>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza" style="text-align:center;padding:1.1rem">
-              <div style="display:inline-grid;place-items:center;width:46px;height:46px;border-radius:99px;background:var(--verde-tenue);color:var(--verde);margin-bottom:.6rem" class="pulso">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-              </div>
-              <div style="font-size:.9rem;font-weight:700">47 de 47 sincronizados</div>
-              <p style="font-size:.74rem;color:var(--texto-45);margin-top:.3rem">Ya están en el panel de la coordinación, con hora y lugar de origen.</p>
-            </div>
-          </div>
-        </div>
-        <div class="demo-pie">
-          <button class="demo-play" data-play aria-label="Pausar o reanudar"></button>
-          <div class="demo-pista" data-pista></div>
-          <span class="demo-rotulo" data-rotulo></span>
-        </div>
-      </article>
-
-      <!-- Demo 3 -->
-      <article class="demo" data-demo="informe">
-        <div class="demo-cabecera">
-          <h3>Del dato al informe <span class="demo-dur">0:12</span></h3>
-          <p>El cierre de mes deja de ser una semana de copiar y pegar.</p>
-        </div>
-        <div class="demo-escena" data-escena>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza">
-              <div class="pieza-t">Auditoría del periodo</div>
-              <div style="display:grid;gap:.35rem">
-                <div class="app-mensaje verde">1.842 registros revisados sin observación</div>
-                <div class="app-mensaje ambar">9 posibles duplicados propuestos para unificar</div>
-                <div class="app-mensaje rojo">3 actividades sin lugar asignado</div>
-              </div>
-            </div>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza">
-              <div class="pieza-t">Avance de indicadores</div>
-              <div style="display:grid;gap:.55rem" data-barras>
-                <div>
-                  <div style="display:flex;justify-content:space-between;font-size:.7rem;margin-bottom:.22rem"><span>Personas alcanzadas</span><b data-pct>92%</b></div>
-                  <div class="app-prog"><i class="verde" data-w="92" style="width:0"></i></div>
-                </div>
-                <div>
-                  <div style="display:flex;justify-content:space-between;font-size:.7rem;margin-bottom:.22rem"><span>Talleres realizados</span><b data-pct>78%</b></div>
-                  <div class="app-prog"><i data-w="78" style="width:0"></i></div>
-                </div>
-                <div>
-                  <div style="display:flex;justify-content:space-between;font-size:.7rem;margin-bottom:.22rem"><span>Derivaciones efectivas</span><b data-pct>61%</b></div>
-                  <div class="app-prog"><i class="ambar" data-w="61" style="width:0"></i></div>
-                </div>
-                <div>
-                  <div style="display:flex;justify-content:space-between;font-size:.7rem;margin-bottom:.22rem"><span>Kits entregados</span><b data-pct>34%</b></div>
-                  <div class="app-prog"><i class="rojo" data-w="34" style="width:0"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza">
-              <div class="pieza-t">Generando entregables</div>
-              <div class="lineas-detectadas">
-                <div class="linea-det"><span class="ok">✓</span> Matriz 345W · 412 filas</div>
-                <div class="linea-det"><span class="ok">✓</span> Reporte de alcance · Excel</div>
-                <div class="linea-det"><span class="ok">✓</span> Dataset Power BI · anónimo</div>
-                <div class="linea-det"><span class="ok">✓</span> Informe narrativo · borrador</div>
-              </div>
-            </div>
-          </div>
-          <div class="demo-cuadro" data-cuadro>
-            <div class="pieza" style="text-align:center;padding:1.2rem">
-              <div class="pieza-t">Tiempo de cierre mensual</div>
-              <div style="display:flex;align-items:baseline;justify-content:center;gap:.6rem;margin:.2rem 0">
-                <span style="font-size:1.1rem;color:var(--texto-25);text-decoration:line-through">6 días</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--texto-25)" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                <span class="contador" data-contador="3" data-sufijo=" h">0</span>
-              </div>
-              <p style="font-size:.74rem;color:var(--texto-45);margin-top:.4rem">Con cada número trazable hasta el registro que lo originó.</p>
-            </div>
-          </div>
-        </div>
-        <div class="demo-pie">
-          <button class="demo-play" data-play aria-label="Pausar o reanudar"></button>
-          <div class="demo-pista" data-pista></div>
-          <span class="demo-rotulo" data-rotulo></span>
-        </div>
-      </article>
-
+    <div class="f-cuatro revelar">
+      <div class="f-mini" data-luz><b>01</b><h3>Cifras del sistema</h3><p>Todo número del informe sale de la base de datos. La IA no puede escribir cifras.</p></div>
+      <div class="f-mini" data-luz><b>02</b><h3>Cada frase con su cita</h3><p>El análisis se apoya en los informes de coordinación del mes y muestra el pasaje de origen.</p></div>
+      <div class="f-mini" data-luz><b>03</b><h3>Un verificador estricto</h3><p>Rechaza números, nombres y frases sin fuente, y pide otro intento antes de mostrárselo.</p></div>
+      <div class="f-mini" data-luz><b>04</b><h3>Usted aprueba siempre</h3><p>Nada se envía solo. Con secciones pendientes, el sistema no deja aprobar.</p></div>
+    </div>
+    <div class="f-brujula revelar">
+      <div>
+        <span class="eyebrow">Brújula · ayuda en cada pantalla</span>
+        <h3>Su equipo aprende usándola</h3>
+        <p>Ayuda contextual, buscador con Ctrl+K y recorridos guiados. «Explícame esta cifra» responde en lenguaje simple, el pasaporte de la cifra muestra de dónde sale cada número y el modo ensayo permite practicar con datos reales sin guardar nada.</p>
+      </div>
+      <ul class="f-chips">
+        <li>Explícame esta cifra</li><li>Pasaporte de la cifra</li><li>Modo ensayo</li><li>Recorrido «Muéstrame»</li><li>Lo que te toca hoy</li><li>Modo claro u oscuro</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ══ CIFRAS ═══════════════════════════════════════════════════════════ -->
-<section class="seccion compacta tinta" style="padding-top:0">
+<!-- ══ SEGURIDAD ════════════════════════════════════════════════════════ -->
+<section class="seccion" id="seguridad">
   <div class="contenedor">
-    <div class="cifras revelar">
-      <div class="cifra"><b data-contador="0" data-texto="0 MB">0</b><span>de datos móviles para registrar en terreno</span><em>la captura funciona sin conexión</em></div>
-      <div class="cifra"><b data-contador="1" data-texto="1">0</b><span>identidad por persona en todos sus proyectos</span><em>se termina el doble conteo</em></div>
-      <div class="cifra"><b data-contador="1" data-texto="1 clic">0</b><span>para exportar la 345W con coordenadas</span><em>desde el dato ya auditado</em></div>
-      <div class="cifra"><b data-contador="0" data-texto="Cero">0</b><span>cifras sin respaldo en el informe</span><em>cada número abre su registro de origen</em></div>
+    <div class="cabecera-seccion centrado revelar">
+      <span class="eyebrow">Gobierno de datos</span>
+      <h2>Lista para la auditoría del donante</h2>
+      <p class="plomo">Datos de protección, salud mental y violencia de género exigen más que una contraseña. Esto viene de fábrica.</p>
+    </div>
+    <div class="f-seis revelar">
+      <div class="f-seg"><h3>Verificación en dos pasos</h3><p>Obligatoria en las cuentas con privilegios, con dispositivo de confianza.</p></div>
+      <div class="f-seg"><h3>Bitácora que no se puede borrar</h3><p>Quién hizo qué y quién vio qué, con fecha y hora.</p></div>
+      <div class="f-seg"><h3>Violencia de género, reservada</h3><p>Ningún rol ve el motivo por defecto. Sin permiso, los totales cuadran igual.</p></div>
+      <div class="f-seg"><h3>16 roles de fábrica</h3><p>Incluido un auditor del donante de solo lectura, anonimizado y con vigencia.</p></div>
+      <div class="f-seg"><h3>Quien captura no aprueba</h3><p>Segregación de funciones entre terreno, coordinación y MEAL.</p></div>
+      <div class="f-seg"><h3>Cada organización, aislada</h3><p>El servidor impone el filtro de organización y proyecto en cada consulta.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ══ CÓMO EMPEZAR ═════════════════════════════════════════════════════ -->
-<section class="seccion">
+<section class="seccion f-oscura">
   <div class="contenedor">
     <div class="cabecera-seccion centrado revelar">
       <span class="eyebrow">Implementación</span>
-      <h2>Operativo en tres semanas, no en tres meses</h2>
-      <p class="plomo">No pedimos que cambie su forma de trabajar. Adaptamos la plataforma a los formularios e indicadores que ya usa.</p>
+      <h2>Un mes de prueba con todo incluido</h2>
+      <p class="plomo">No pedimos que cambie su forma de trabajar. Durante el mes de prueba tiene todos los módulos del Premium, con sus formularios e indicadores.</p>
     </div>
     <div class="flujo revelar">
       <div class="flujo-paso">
@@ -546,33 +480,8 @@
       </div>
       <div class="flujo-paso">
         <h3>Primer cierre acompañado</h3>
-        <p>Lo acompañamos en el primer informe mensual completo. Desde el segundo, su equipo vuela solo.</p>
+        <p>Su primera 345W y su primer informe mensual, con nosotros al lado. Al terminar el mes, usted decide.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ TESTIMONIOS ══════════════════════════════════════════════════════ -->
-<section class="seccion suave linea">
-  <div class="contenedor">
-    <div class="cabecera-seccion centrado revelar">
-      <span class="eyebrow">Situaciones de uso</span>
-      <h2>Lo que cambia en el día a día</h2>
-      <p class="plomo">Tres situaciones concretas del trabajo MEAL, según el rol. No son testimonios de clientes: son los problemas que la plataforma fue construida para resolver.</p>
-    </div>
-    <div class="testis revelar">
-      <article class="testi">
-        <blockquote>Volver de terreno con dos horas de tipeo por delante. Con la captura móvil, el registro sale de la comunidad ya cargado y se sincroniza solo al recuperar señal en la ruta.</blockquote>
-        <div class="testi-autor"><span class="testi-ini">PT</span><div><b>Promotor de terreno</b><span>Quién lo usa a diario</span></div></div>
-      </article>
-      <article class="testi">
-        <blockquote>Descubrir el error en la reunión con el donante, tres meses tarde. La auditoría automática lo pone en la bandeja de revisión el mismo día en que entra el dato.</blockquote>
-        <div class="testi-autor"><span class="testi-ini">OM</span><div><b>Oficial de monitoreo</b><span>Quién responde por la cifra</span></div></div>
-      </article>
-      <article class="testi">
-        <blockquote>Firmar un informe sin poder rastrear de dónde salió cada número. Aquí cualquier cifra abre el registro que la sustenta, incluso seis meses después.</blockquote>
-        <div class="testi-autor"><span class="testi-ini">DP</span><div><b>Dirección de proyectos</b><span>Quién firma ante el donante</span></div></div>
-      </article>
     </div>
   </div>
 </section>
@@ -585,8 +494,14 @@
       <h2>Dos planes. Uno para empezar,<br>uno para todo el ciclo MEAL</h2>
       <p class="plomo">Precios en dólares, por organización y por mes. Sin costo de instalación y sin permanencia mínima.</p>
     </div>
-    <div class="planes revelar">
 
+    <div class="f-prueba revelar">
+      <span class="f-prueba-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg></span>
+      <div><b>Prueba de 1 mes con todos los módulos del Premium.</b> <span>345W, informe con IA, Power BI e IPTT incluidos. Sin tarjeta. Al terminar, elige plan o se lleva sus datos.</span></div>
+      <a class="btn primario" href="#contacto">Pedir mi mes de prueba</a>
+    </div>
+
+    <div class="planes revelar">
       <article class="plan">
         <div>
           <h3>Básico</h3>
@@ -601,17 +516,17 @@
         </div>
         <ul>
           <li><b>1 proyecto activo</b> y hasta 5 usuarios</li>
-          <li><b>Captura móvil sin internet</b> con sincronización automática</li>
+          <li><b>Captura móvil sin internet</b> con envío automático</li>
+          <li><b>Coordinación de terreno:</b> aprobar o devolver lo que llega del teléfono</li>
           <li><b>Carga y validación de formularios</b> en Excel y CSV</li>
           <li><b>Registro de personas</b> con identidad única dentro del proyecto</li>
-          <li><b>Atenciones y actividades</b> de terreno</li>
           <li><b>Panel del mes</b> con totales y desagregación por sexo y edad</li>
           <li><b>Reporte de atenciones</b> exportable a Excel</li>
           <li>Soporte por correo, respuesta en 48 horas</li>
         </ul>
         <div class="plan-excluye">
           <b>No incluye</b>
-          <span>IPTT · auditoría automática · 345W · Power BI · informe narrativo · multiproyecto · OCR de planillas</span>
+          <span>345W · Power BI · informe mensual con IA · informe al donante · IPTT · auditoría automática · multiproyecto · lectura de planillas con IA</span>
         </div>
         <a class="btn" href="#contacto">Empezar con el Básico</a>
       </article>
@@ -634,21 +549,20 @@
         </div>
         <ul>
           <li><b>Todo lo del Básico</b>, sin límite de usuarios ni de proyectos</li>
-          <li><b>Indicadores IPTT en vivo</b> — metas, avance, brecha y semáforo por indicador, desagregados por sexo, edad, lugar y periodo</li>
-          <li><b>Auditoría automática del periodo</b> — duplicados, campos vacíos, fechas imposibles y totales que no cuadran, detectados antes del cierre</li>
-          <li><b>Exportación 345W con coordenadas</b>, lista para el clúster</li>
-          <li><b>Bandeja única de revisión</b> — rechazos, duplicados y lugares nuevos en un solo lugar</li>
-          <li><b>Identidad única a nivel de organización</b> — la misma persona en todos sus proyectos, sin inflar alcances</li>
-          <li><b>Multiproyecto y multiorganización</b> con datos aislados entre sí</li>
-          <li><b>Informe narrativo asistido</b> con las cifras ya cruzadas</li>
-          <li><b>Dataset anónimo para Power BI</b> y sus propios tableros</li>
-          <li><b>Lectura OCR de planillas de papel</b> cotejada contra los totales declarados</li>
-          <li><b>Actividades georreferenciadas</b> tomadas de la agenda real del proyecto</li>
-          <li><b>Migración de su histórico</b> de planillas, sin costo</li>
-          <li><b>Capacitación del equipo</b> y primer cierre mensual acompañado</li>
+          <li><b>Plataforma 345W</b> validada contra las 67 columnas de la plantilla, lista para subir</li>
+          <li><b>Informe narrativo mensual con IA</b> en un clic, sobre la plantilla oficial del donante</li>
+          <li><b>Informe de progreso al donante</b>, trimestral o de cierre</li>
+          <li><b>Power BI</b> con un dataset anónimo y sus propios tableros</li>
+          <li><b>Indicadores IPTT en vivo</b>, con extracción de indicadores por IA desde sus documentos</li>
+          <li><b>Auditoría automática</b> y revisión de identidad antes del cierre</li>
+          <li><b>Matriz de avance y tabla de gestión</b> en vivo, con descarga en Excel</li>
+          <li><b>Lectura de planillas con IA</b> cotejada contra los totales declarados</li>
+          <li><b>Multiproyecto</b> e identidad única a nivel de organización</li>
+          <li><b>Seguridad completa:</b> verificación en dos pasos, bitácora y 16 roles</li>
+          <li><b>Migración de su histórico</b>, capacitación y primer cierre acompañado</li>
           <li><b>Soporte prioritario por WhatsApp</b>, respuesta el mismo día</li>
         </ul>
-        <a class="btn primario" href="#contacto">Tomar uno de los 5 cupos</a>
+        <a class="btn primario" href="#contacto">Probar 1 mes gratis</a>
       </article>
 
       <article class="plan">
@@ -667,7 +581,6 @@
         </ul>
         <a class="btn" href="#contacto">Hablemos del caso</a>
       </article>
-
     </div>
     <p class="planes-pie">
       Todos los planes: datos exportables en formato abierto cuando los pida, sin permanencia mínima y sin costo de instalación.
@@ -677,7 +590,7 @@
 </section>
 
 <!-- ══ GUÍA (imán de tráfico) ═══════════════════════════════════════════ -->
-<section class="seccion" id="guia">
+<section class="seccion f-oscura" id="guia">
   <div class="contenedor">
     <div class="iman revelar">
       <div class="iman-txt">
@@ -695,15 +608,11 @@
           <li>Checklist imprimible de control previo al envío</li>
         </ul>
         <div class="acciones" style="margin-top:1.8rem">
-          <a class="btn lg primario" href="guia-345w.html">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            Leer la guía completa
-          </a>
-          <a class="btn lg" data-wa-link href="#" target="_blank" rel="noopener">Pedir el diagnóstico gratuito</a>
+          <a class="btn lg primario" href="guia-345w.html">Leer la guía completa</a>
+          <button class="btn lg vidrio" type="button" data-ver-video="345w">¿Y si se armara sola? Ver el video</button>
         </div>
         <p class="hero-nota" style="text-align:left">Se lee en el navegador y se guarda en PDF con un clic. No pedimos su correo.</p>
       </div>
-
       <a class="iman-portada" href="guia-345w.html" aria-label="Abrir la guía 345W">
         <div class="iman-hoja">
           <span class="iman-sello">Guía práctica</span>
@@ -727,7 +636,7 @@
 </section>
 
 <!-- ══ FAQ ══════════════════════════════════════════════════════════════ -->
-<section class="seccion suave linea" id="faq">
+<section class="seccion" id="faq">
   <div class="contenedor">
     <div class="cabecera-seccion centrado revelar">
       <span class="eyebrow">Preguntas</span>
@@ -735,24 +644,36 @@
     </div>
     <div class="faq revelar">
       <details open>
+        <summary>¿Qué incluye la prueba de un mes?</summary>
+        <div class="resp">Todos los módulos del plan Premium durante un mes: 345W, informe mensual con IA, Power BI, IPTT, auditoría y captura móvil. La hacemos con sus formularios o con datos de demostración, sin tarjeta. Al terminar elige plan, o exporta todos sus datos y se los lleva.</div>
+      </details>
+      <details>
+        <summary>¿La IA puede inventar cifras en el informe?</summary>
+        <div class="resp">No. Las cifras las escribe el sistema desde la base de datos; la IA solo redacta el análisis cualitativo, a partir de los informes de coordinación, y cada frase cita el pasaje de donde sale. Un verificador rechaza números, nombres y frases sin fuente, y el informe no se puede aprobar mientras quede una sección pendiente.</div>
+      </details>
+      <details>
+        <summary>¿La 345W sale lista para subir a la plataforma?</summary>
+        <div class="resp">Sale en el formato de importación de la plataforma o en el de la plantilla, validada contra sus 67 columnas: códigos geográficos, coordenadas, vocabulario cerrado y 18 franjas de sexo y edad. Si falta algo, la exportación se bloquea y le dice exactamente qué; nada sale a medias.</div>
+      </details>
+      <details>
         <summary>¿Qué pasa con los datos personales de los beneficiarios?</summary>
-        <div class="resp">Los datos identificables quedan en su base, con acceso por rol y registro de quién vio qué. Lo que sale hacia tableros y reportes públicos va anonimizado y agregado. Si su donante exige que la información no salga del país o de su propia infraestructura, se puede instalar en su servidor.</div>
+        <div class="resp">Los datos identificables quedan en su base, con acceso por rol y registro de quién vio qué. El motivo de atención y los casos de violencia de género no los ve ningún rol por defecto. Lo que sale hacia tableros y reportes va anonimizado y agregado. Si su donante exige que la información no salga del país o de su propia infraestructura, el plan Institucional se instala en su servidor.</div>
       </details>
       <details>
         <summary>Ya usamos Excel y nos funciona. ¿Por qué cambiar?</summary>
-        <div class="resp">No le pedimos abandonar Excel: la plataforma lo lee y exporta hacia él. Lo que cambia es que deja de ser la base de datos. El Excel no le avisa que contó dos veces a la misma persona, no le dice quién editó la celda, y no reconstruye la evidencia cuando el donante pregunta seis meses después.</div>
+        <div class="resp">No le pedimos abandonar Excel: la plataforma lo lee y exporta hacia él. Lo que cambia es que deja de ser la base de datos. El Excel no le avisa que contó dos veces a la misma persona, no le dice quién editó la celda y no le arma la 345W validada en un minuto.</div>
       </details>
       <details>
         <summary>Nuestro equipo de terreno no es técnico. ¿Lo van a poder usar?</summary>
-        <div class="resp">La pantalla de captura tiene una lista y una casilla por persona. Se maneja con una mano, de pie y sin señal. La capacitación de terreno dura una sesión. Si alguien sabe usar WhatsApp, puede usar esto.</div>
+        <div class="resp">La pantalla de captura tiene una lista, una foto y un botón. Se maneja con una mano, de pie y sin señal, y cada pantalla trae su ayuda. La capacitación de terreno dura una sesión. Si alguien sabe usar WhatsApp, puede usar esto.</div>
       </details>
       <details>
         <summary>¿Funciona si en la zona no hay internet?</summary>
-        <div class="resp">Sí. Esa es la premisa de diseño, no un extra. El registro se guarda en el teléfono con su sello de hora y lugar, y se sube solo cuando hay señal. La cola de sincronización es visible: siempre se sabe qué falta subir.</div>
+        <div class="resp">Sí. Esa es la premisa de diseño, no un extra. El registro se guarda en el teléfono con su sello de hora y lugar, y se envía solo cuando hay señal. La cola de envío es visible y un reintento nunca duplica el registro.</div>
       </details>
       <details>
         <summary>¿Se adapta a los indicadores de nuestro marco lógico?</summary>
-        <div class="resp">Sí. Cargamos sus indicadores con sus metas, desagregaciones y fórmulas de cálculo durante la configuración. Si el donante cambia el marco a mitad de proyecto, se ajusta sin perder el histórico.</div>
+        <div class="resp">Sí. La IA extrae los indicadores de sus documentos de proyecto, con la cita de donde salen, y su equipo los confirma con sus metas y desagregaciones. Si el donante cambia el marco a mitad de proyecto, se ajusta sin perder el histórico.</div>
       </details>
       <details>
         <summary>¿Qué pasa con los datos históricos que ya tenemos?</summary>
@@ -760,19 +681,15 @@
       </details>
       <details>
         <summary>¿Dónde se alojan los datos y quién los puede ver?</summary>
-        <div class="resp">La plataforma corre en infraestructura en la nube con conexión cifrada (HTTPS) y la base de datos es independiente por organización. El acceso es por rol y queda registrado. Si su donante exige que la información no salga de su propia infraestructura, el plan Institucional contempla la instalación en su servidor.</div>
+        <div class="resp">La plataforma corre en la nube con conexión cifrada (HTTPS). Cada organización ve solo sus datos: el servidor impone el filtro de organización y proyecto en cada consulta, así que cambiar un identificador desde el navegador no cruza información. El acceso es por rol y queda registrado.</div>
       </details>
       <details>
-        <summary>¿Con qué frecuencia se hacen respaldos?</summary>
-        <div class="resp">La base tiene respaldo automático diario, y además puede exportar todos sus datos en formato abierto cuando quiera, sin pedir permiso ni esperar a nadie. Esa exportación es su copia de seguridad independiente: aunque mañana desapareciera el servicio, sus datos siguen siendo utilizables.</div>
+        <summary>¿Cómo se respaldan los datos?</summary>
+        <div class="resp">La base se respalda cifrada, con un procedimiento de restauración probado. Además, usted puede exportar todos sus datos en formato abierto cuando quiera, sin pedir permiso ni esperar a nadie. Esa exportación es su copia independiente: aunque mañana desapareciéramos, sus datos seguirían siendo suyos y legibles.</div>
       </details>
       <details>
         <summary>Detrás del producto hay una sola persona. ¿Qué pasa si le ocurre algo?</summary>
-        <div class="resp">Es la pregunta correcta y merece una respuesta honesta, no una promesa. Tres cosas la responden: sus datos son exportables en formato abierto en cualquier momento, así que nunca quedan secuestrados; la plataforma usa tecnologías estándar y documentadas, de modo que otro equipo técnico puede tomarla; y para el plan Institucional se puede acordar por contrato la entrega del código fuente. Si su organización necesita garantías formales de continuidad, se conversan y se firman antes de empezar.</div>
-      </details>
-      <details>
-        <summary>¿Podemos probarla con nuestros propios datos antes de decidir?</summary>
-        <div class="resp">Sí, y es lo que recomendamos. El camino habitual es el diagnóstico gratuito: nos envía su planilla del último mes, la cargamos en un ambiente de prueba y le devolvemos un informe de calidad de datos con los duplicados y las inconsistencias que tenga hoy. Ve la plataforma funcionando con su información real, no con un ejemplo inventado, y sin compromiso.</div>
+        <div class="resp">Es la pregunta correcta y merece una respuesta honesta, no una promesa. Tres cosas la responden: sus datos son exportables en formato abierto en cualquier momento, así que nunca quedan secuestrados; la plataforma usa tecnologías estándar y documentadas que otro equipo puede mantener; y el plan Institucional puede instalarse en su propio servidor.</div>
       </details>
       <details>
         <summary>¿Y si dejamos de usar la plataforma?</summary>
@@ -783,7 +700,7 @@
 </section>
 
 <!-- ══ QUIÉN ESTÁ DETRÁS ════════════════════════════════════════════════ -->
-<section class="seccion suave linea" id="autor">
+<section class="seccion f-oscura" id="autor">
   <div class="contenedor">
     <div class="cabecera-seccion centrado revelar">
       <span class="eyebrow">Quién está detrás</span>
@@ -946,8 +863,8 @@
     <div class="contacto-rejilla">
       <div class="revelar">
         <span class="eyebrow">Contacto</span>
-        <h2 style="margin-bottom:.9rem">Veinte minutos y le mostramos<br>su propio proyecto adentro</h2>
-        <p class="plomo" style="margin-bottom:2rem">Escríbanos por donde le resulte más cómodo. Respondemos en el día hábil.</p>
+        <h2 style="margin-bottom:.9rem">Pida su mes de prueba</h2>
+        <p class="plomo" style="margin-bottom:2rem">Veinte minutos de demostración con su propio proyecto adentro, y le activamos un mes con todos los módulos. Respondemos en el día hábil.</p>
 
         <div class="canales">
           <a class="canal" data-wa-link href="#" target="_blank" rel="noopener">
@@ -982,7 +899,7 @@
       </div>
 
       <div class="formulario revelar">
-        <h3>Solicitar una demostración</h3>
+        <h3>Solicitar el mes de prueba</h3>
         <p>Complete esto y le escribimos por WhatsApp o correo, como prefiera.</p>
         <form id="formDemo" novalidate>
           <div class="campo-2">
@@ -1004,7 +921,7 @@
           </div>
           <div class="campo">
             <label for="f-msj">¿Qué es lo que más le cuesta hoy?</label>
-            <textarea id="f-msj" name="mensaje" placeholder="Ej.: el cierre mensual nos lleva una semana y siempre aparecen duplicados."></textarea>
+            <textarea id="f-msj" name="mensaje" placeholder="Ej.: la 345W nos lleva días y el informe mensual se escribe desde cero."></textarea>
           </div>
           <button class="btn primario lg" type="submit" style="width:100%">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
@@ -1018,14 +935,14 @@
 </section>
 
 <!-- ══ CTA FINAL ════════════════════════════════════════════════════════ -->
-<section class="seccion">
+<section class="seccion f-final">
   <div class="contenedor">
     <div class="cta-caja revelar">
-      <h2>Su próximo informe puede tener<br>la evidencia detrás de cada número</h2>
-      <p>Agende una demostración de veinte minutos. Si no le sirve, se lo decimos nosotros mismos.</p>
+      <h2>Su próxima 345W puede tomarle <span class="grad">un minuto</span></h2>
+      <p>Y su próximo informe mensual, un clic. Pruébelo un mes con todos los módulos; si no le sirve, se lo decimos nosotros mismos.</p>
       <div class="acciones" style="justify-content:center">
-        <a class="btn lg" data-wa-link href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-        <a class="btn lg fantasma" href="#contacto">Dejar mis datos</a>
+        <a class="btn lg primario" data-wa-link href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <button class="btn lg vidrio" type="button" data-ver-video="presentacion">Ver la presentación completa</button>
       </div>
     </div>
   </div>
@@ -1058,9 +975,9 @@
       <div>
         <h4>Producto</h4>
         <ul>
-          <li><a href="#producto">Qué resuelve</a></li>
-          <li><a href="#pantallas">Pantallas</a></li>
-          <li><a href="#demos">Cómo funciona</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#cierre">Cierre de mes</a></li>
+          <li><a href="#plataforma">Plataforma</a></li>
           <li><a href="#planes">Planes</a></li>
           <li><a href="guia-345w.html">Guía 345W</a></li>
         </ul>
@@ -1068,10 +985,11 @@
       <div>
         <h4>Módulos</h4>
         <ul>
+          <li><a href="#cierre">Plataforma 345W</a></li>
+          <li><a href="#cierre">Informe mensual con IA</a></li>
           <li><a href="#pantallas">Captura móvil</a></li>
-          <li><a href="#pantallas">Auditoría de datos</a></li>
           <li><a href="#pantallas">Indicadores IPTT</a></li>
-          <li><a href="#pantallas">Reportes 345W</a></li>
+          <li><a href="#seguridad">Seguridad</a></li>
         </ul>
       </div>
       <div>
@@ -1080,7 +998,7 @@
           <li><a data-wa-link href="#" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a data-ig-link href="#" target="_blank" rel="noopener">Instagram</a></li>
           <li><a data-mail-link href="#">Correo</a></li>
-          <li><a href="#contacto">Pedir demo</a></li>
+          <li><a href="#contacto">Pedir el mes de prueba</a></li>
           <li><a href="privacidad.html">Privacidad</a></li>
         </ul>
       </div>
@@ -1102,5 +1020,6 @@
 
 <script src="js/pantallas.js"></script>
 <script src="js/app.js"></script>
+<script src="js/videos.js"></script>
 </body>
 </html>

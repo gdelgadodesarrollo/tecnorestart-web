@@ -11,7 +11,7 @@ var CONFIG = {
   // Cómo se muestra el número en pantalla.
   whatsappVisible: '+58 412 168 0381',
   // Mensaje con el que se abre el chat.
-  whatsappMensaje: 'Buen día, vi el sitio de TecnoRestart MEAL y quisiera agendar una demostración.',
+  whatsappMensaje: 'Buen día, vi el sitio de TecnoRestart MEAL y quisiera probarlo un mes.',
 
   // Usuario de Instagram, sin la arroba.
   instagram: 'tecnorestart',
@@ -228,111 +228,7 @@ var MEDICION = {
     });
   });
 
-  /* ── 7. Reproductor de las demos ────────────────────────────────────── */
-  var ROTULOS = {
-    papel:   ['Planilla en papel', 'Lectura y validación', 'Resultado de la carga', 'Ya cuenta al indicador'],
-    offline: ['Terreno sin cobertura', 'Todo guardado local', 'Vuelve la señal', 'Sincronizado'],
-    informe: ['Auditoría del periodo', 'Avance de indicadores', 'Generando entregables', 'Cierre terminado']
-  };
-  var DURACION = 3000;
-
-  var iconoPlay  = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>';
-  var iconoPausa = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>';
-
-  $$('.demo').forEach(function (demo) {
-    var cuadros = $$('[data-cuadro]', demo);
-    var pista   = $('[data-pista]', demo);
-    var rotulo  = $('[data-rotulo]', demo);
-    var play    = $('[data-play]', demo);
-    var nombres = ROTULOS[demo.getAttribute('data-demo')] || [];
-    var i = 0, temporizador = null, corriendo = false, visible = false;
-
-    cuadros.forEach(function (_, n) {
-      var seg = document.createElement('button');
-      seg.className = 'demo-seg';
-      seg.type = 'button';
-      seg.style.setProperty('--dur', DURACION + 'ms');
-      seg.setAttribute('aria-label', T('Ir al paso {n}', { n: n + 1 }));
-      seg.innerHTML = '<i></i>';
-      seg.addEventListener('click', function () { ir(n); arrancar(); });
-      pista.appendChild(seg);
-    });
-    var segmentos = $$('.demo-seg', pista);
-
-    function ir(n) {
-      i = n;
-      cuadros.forEach(function (c, k) { c.classList.toggle('visible', k === n); });
-      segmentos.forEach(function (s, k) {
-        s.classList.remove('activo', 'lleno');
-        if (k < n) s.classList.add('lleno');
-      });
-      // reinicia la animación del segmento activo
-      var act = segmentos[n];
-      act.classList.remove('activo');
-      void act.offsetWidth;
-      act.classList.add('activo');
-
-      rotulo.textContent = nombres[n] ? T(nombres[n]) : '';
-
-      var vivo = cuadros[n];
-      $$('[data-contador]', vivo).forEach(function (el) { delete el.dataset.contado; contar(el); });
-      $$('[data-w]', vivo).forEach(function (el, k) {
-        el.style.width = '0';
-        setTimeout(function () { el.style.width = el.getAttribute('data-w') + '%'; }, 120 + k * 130);
-      });
-      // relanza las animaciones CSS de entrada del cuadro
-      $$('.linea-det', vivo).forEach(function (el) {
-        el.style.animation = 'none'; void el.offsetWidth; el.style.animation = '';
-      });
-    }
-
-    function siguiente() { ir((i + 1) % cuadros.length); }
-
-    function arrancar() {
-      if (reducido) { ir(i); return; }
-      clearInterval(temporizador);
-      corriendo = true;
-      demo.classList.remove('pausada');
-      play.innerHTML = iconoPausa;
-      play.setAttribute('aria-label', T('Pausar'));
-      ir(i);
-      temporizador = setInterval(siguiente, DURACION);
-    }
-
-    function parar() {
-      clearInterval(temporizador);
-      corriendo = false;
-      demo.classList.add('pausada');
-      play.innerHTML = iconoPlay;
-      play.setAttribute('aria-label', T('Reproducir'));
-    }
-
-    play.innerHTML = iconoPlay;
-    play.addEventListener('click', function () { corriendo ? parar() : arrancar(); });
-
-    // Arranca solo cuando la demo está a la vista; se pausa al salir.
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (es) {
-        es.forEach(function (e) {
-          visible = e.isIntersecting;
-          if (visible && !corriendo) arrancar();
-          else if (!visible && corriendo) parar();
-        });
-      }, { threshold: 0.35 }).observe(demo);
-    } else {
-      arrancar();
-    }
-
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden && corriendo) parar();
-      else if (!document.hidden && visible && !corriendo) arrancar();
-    });
-
-    ir(0);
-    if (reducido) { cuadros.forEach(function (c) { c.classList.add('visible'); c.style.position = 'relative'; c.style.inset = 'auto'; }); }
-  });
-
-  /* ── 8. Navegación ──────────────────────────────────────────────────── */
+  /* ── 7. Navegación ──────────────────────────────────────────────────── */
   var nav = $('#nav'), burger = $('#burger');
   if (nav) {
     window.addEventListener('scroll', function () {
@@ -352,7 +248,7 @@ var MEDICION = {
     });
   }
 
-  /* ── 9. Medición (solo si MEDICION está completo) ───────────────────── */
+  /* ── 8. Medición (solo si MEDICION está completo) ───────────────────── */
   var M = window.MEDICION || { etiquetas: {} };
   var hayMedicion = !!(M.ga4 || M.googleAds);
   var CLAVE = 'meal_cookies';
@@ -383,6 +279,8 @@ var MEDICION = {
       gtag('event', 'conversion', { send_to: M.googleAds + '/' + etq });
     }
   }
+  // Para que js/videos.js registre sus propios eventos.
+  window.MEAL_EVENTO = evento;
 
   /* Aviso de cookies — solo existe si hay medición configurada. */
   var aviso = null;
@@ -445,7 +343,7 @@ var MEDICION = {
     });
   }
 
-  /* ── 10. Formulario → WhatsApp ──────────────────────────────────────── */
+  /* ── 9. Formulario → WhatsApp ──────────────────────────────────────── */
   var form = $('#formDemo');
   if (form) {
     form.addEventListener('submit', function (e) {
